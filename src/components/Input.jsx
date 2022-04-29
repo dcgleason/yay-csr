@@ -314,7 +314,6 @@ const submitRequest = async (e) => {
           </div>
           </div>
         </form>
-
         <div className="inline-flex">
         <button  onClick={handleAddFields} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-6 rounded-l">
              <span className='font-bold'> + </span> (add email)
