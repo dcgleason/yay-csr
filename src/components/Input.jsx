@@ -242,9 +242,9 @@ const sendEmails = async () => {
 
 const submitRequest = async (e) => {
   e.preventDefault();
-  alert("Submitted!")
   databasePost();
   sendEmails();
+  alert("Submitted!")
   };
 
 
