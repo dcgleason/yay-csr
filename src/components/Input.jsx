@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import {loadStripe} from '@stripe/stripe-js';
+import {
+  PaymentElement,
+  Elements,
+  useStripe,
+  useElements,
+} from '@stripe/react-stripe-js';
 
 const Input = () => {
   const [emails, setEmail] = useState([ { id: uuidv4(),  email: '' }]);
@@ -7,11 +14,14 @@ const Input = () => {
   const [name, setName] = useState(['']);
   const [data, setData] = useState([]);
   var intArray = []
+  const stripe = useStripe();
+  const elements = useElements();
+
+
+
  
-
   useEffect(() => {
-
-    const fetchData = async () => {
+  const fetchData = async () => {
       // get the data from the api
       const response = await fetch('https://yay-api.herokuapp.com/unique');
       const json = await response.json();
@@ -59,143 +69,151 @@ const generateUniqueRandom = async () => {
     console.log(emails);
   }
 
-  const handleAddFields = () => {
+const handleAddFields = () => {
     setEmail([...emails, { id: uuidv4(),  email: '' }])
   }
 
-  const handleRemoveFields = id => {
+const handleRemoveFields = id => {
     const values  = [...emails];
     values.splice(values.findIndex(value => value.id === id), 1);
     setEmail(values);
   }
  
-  function timeout(ms) {
+function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
+const databasePost = async () => {
+  const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
+      method: 'POST', 
+      headers: { 
+        'Content-type': 'application/json'
+       }, 
+      body: JSON.stringify({
+        unique_id: randomNumber,
+        name: name
+      }) 
+      }); 
+    const rData = await responseEmail.json(); 
+    if (rData.status === 'success'){
+     alert("Message Sent."); 
+      this.resetForm()
+     }else if(rData.status === 'fail'){
+       alert("Message failed to send.")
+     }
+    }
+
+
+const sendEmails = async () => {
+      const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
+      try {
+            for(var j=0; j<emails.length; j++){
+              if(emails[j]){
+                (async function(j){
+                const response =  await fetch("https://yay-api.herokuapp.com/email", { 
+                  method: 'POST', 
+                  headers: { 
+                    'Content-type': 'application/json'
+                   }, 
+                  body: JSON.stringify({
+                    question: questions,
+                    email: emails[j].email,
+                    unique_id: randomNumber,
+                    name: name
+                  }) 
+                  }); 
+                const resData = await response.json(); 
+                if (resData.status === 'success'){
+                 alert("Message Sent."); 
+                  this.resetForm()
+                 }else if(resData.status === 'fail'){
+                   alert("Message failed to send.")
+                 }
+                console.log('j' + j);
+                })(j);
+              }
+            }
+  
+          }
+          catch {
+            console.log('error in sending email(s)');
+          }
+        };
+  
+
+   const getMessagesbyEmailID  = async () => { 
+
+    try {
+        // get the message ids for a particular unique ID
+        const resp =  await fetch("https://yay-api.herokuapp.com/messages", { 
+          method: 'POST', 
+          headers: { 
+            'Content-type': 'application/json'
+           }, 
+          body: JSON.stringify({
+            unique: randomNumber
+          }) 
+          }); 
+          const resultsData = await resp.json(); 
+          if (resultsData.status === 'success'){
+           alert("Message Sent."); 
+            this.resetForm()
+           }else if(resultsData.status === 'fail'){
+             alert("Message failed to send.")
+           }
+  // loop of post requests, to get body of emails, based on the the specific id (passed from the previous post request)
+     
+        console.log('resultsData typeof' + typeof resultsData);
+         var resultsArray = [];
+         var snippets = [];
+      for(var i = 0; i< resultsData.length; i++){
+      for(let key in resultsData[i]) {
+        console.log(key + ":", resultsData[i][key]);
+        if(key=="id"){
+          resultsArray.push((resultsData[i][key]))
+        };
+      }
+    }
+      console.log('resultsarray' + resultsArray);
+      console.log('before the message api post call');
+      console.log('resultsArray[1] typeof' + typeof resultsArray[1]);
+  
+      for (var m =0; m<resultsArray.length; m++ ){
+          const r =  await fetch("https://yay-api.herokuapp.com/message", { 
+          method: 'POST', 
+          headers: { 
+            'Content-type': 'application/json'
+           }, 
+          body: JSON.stringify({
+            message_id: resultsArray[m]
+          }) 
+          }); 
+          const rData = await r.json(); 
+          console.log('rData typeOf' + rData)
+          if (rData.status === 'success'){
+           consol.log("Message Sent."); 
+            this.resetForm()
+           }else if(rData.status === 'fail'){
+             console.log("Message failed to send.")
+           }
+          if(rData.id){
+          snippets.push(rData.snippet);
+          console.log('snippet: ' + snippets);
+          }
+          }
+          console.log('snippets all: ' + snippets);
+
+        }
+        catch {
+          console.log('error in message getting')
+        }
+}
+
+
 const submitRequest = async (e) => {
   e.preventDefault();
-  const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
-  var resultsArray = [];
-  var snippets = [];
-  const dbPost = async () => {
-    const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
-        method: 'POST', 
-        headers: { 
-          'Content-type': 'application/json'
-         }, 
-        body: JSON.stringify({
-          unique_id: randomNumber,
-          name: name
-        }) 
-        }); 
-      const rData = await responseEmail.json(); 
-      if (rData.status === 'success'){
-       alert("Message Sent."); 
-        this.resetForm()
-       }else if(rData.status === 'fail'){
-         alert("Message failed to send.")
-       }
-      }
-
- dbPost();
-
-      try{
-       for(var i = 0; i<questions.length; i++){
-          for(var j=0; j<emails.length; j++){
-            if(emails[j]){
-              (async function(i, j){
-              console.log('this should be sent twice very quickly, every 1 minute')
-              const response =  await fetch("https://yay-api.herokuapp.com/email", { 
-                method: 'POST', 
-                headers: { 
-                  'Content-type': 'application/json'
-                 }, 
-                body: JSON.stringify({
-                  question: questions[i],
-                  email: emails[j].email,
-                  unique_id: randomNumber,
-                  name: name
-                }) 
-                }); 
-              const resData = await response.json(); 
-              if (resData.status === 'success'){
-               alert("Message Sent."); 
-                this.resetForm()
-               }else if(resData.status === 'fail'){
-                 alert("Message failed to send.")
-               }
-              console.log('j' + j);
-              })(i, j);
-            }
-          }
-       await timeout(10000);
-
-      };
-      console.log('before second await timout')
-      await timeout(10000);
-      console.log('after second await timoeout -- ideally 24 hours after the emails all send')
-
-      // get the message ids for a particular unique ID
-      const resp =  await fetch("https://yay-api.herokuapp.com/messages", { 
-        method: 'POST', 
-        headers: { 
-          'Content-type': 'application/json'
-         }, 
-        body: JSON.stringify({
-          unique: randomNumber
-        }) 
-        }); 
-        const resultsData = await resp.json(); 
-        if (resultsData.status === 'success'){
-         alert("Message Sent."); 
-          this.resetForm()
-         }else if(resultsData.status === 'fail'){
-           alert("Message failed to send.")
-         }
-// loop of post requests, to get body of emails, based on the the specific id (passed from the previous post request)
-    console.log('resultsData typeof' + typeof resultsData);
-    for(var i = 0; i< resultsData.length; i++){
-    for(let key in resultsData[i]) {
-      console.log(key + ":", resultsData[i][key]);
-      if(key=="id"){
-        resultsArray.push((resultsData[i][key]))
-      };
-    }
-  }
-    console.log('resultsarray' + resultsArray);
-    console.log('before the message api post call');
-    console.log('resultsArray[1] typeof' + typeof resultsArray[1]);
-
-    for (var m =0; m<resultsArray.length; m++ ){
-        const r =  await fetch("https://yay-api.herokuapp.com/message", { 
-        method: 'POST', 
-        headers: { 
-          'Content-type': 'application/json'
-         }, 
-        body: JSON.stringify({
-          message_id: resultsArray[m]
-        }) 
-        }); 
-        const rData = await r.json(); 
-        console.log('rData typeOf' + rData)
-        if (rData.status === 'success'){
-         consol.log("Message Sent."); 
-          this.resetForm()
-         }else if(rData.status === 'fail'){
-           console.log("Message failed to send.")
-         }
-        if(rData.id){
-        snippets.push(rData.snippet);
-        console.log('snippet: ' + snippets);
-        }
-        await timeout(10000);
-        }
-        console.log('snippets all: ' + snippets);
-   }
-    catch{
-      console.log('error somewhere in the try block');
-    }
+  databasePost();
   };
 
 
