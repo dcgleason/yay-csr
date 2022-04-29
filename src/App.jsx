@@ -41,8 +41,9 @@ const options = {
       <h6 className= 'font-medium leading-tight text-base text-blue-700 d'>Gift meaningfully</h6>
     </div> 
     <div className="App justify-center w-full">
-    <Elements  stripe={stripePromise} options={options}>
-        <Input/>
+   
+     <Elements  stripe={stripePromise} options={options}>
+     <Input/>
      </Elements>
        
     </div>
