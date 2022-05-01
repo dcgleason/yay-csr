@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 We send out a list of prompts via email to your contributors to facilitate the message writing process. A prompt may be, "What is your favorite quality of Eliza?" for example...if Eliza was recieving the gift. Contributors have two weeks to reply with their responses. 
+                 Prompts are sen email to your contributors to facilitate the message writing process. A prompt may be, "What is your favorite quality of Eliza?" for example...if Eliza was recieving the gift. Contributors have two weeks to reply with their responses. 
                 </p>
               </div>
               <div>
