@@ -798,7 +798,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  Within days after the responses are collected, they are compiled and published into a book and sent to you, the gift initiator, for you to give to your recipient.
+                  Within days after responses are collected, they are compiled and published into a book and sent to you, the gift initiator, for you to give to your recipient.
                 </p>
               </div>
             </div>
