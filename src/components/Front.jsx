@@ -163,8 +163,8 @@ const product = {
     { id: 2, name: 'Bags', href: '#' },
   ],
   sizes: [
-    { name: '18L', description: 'Perfect for a reasonable amount of snacks.' },
-    { name: '20L', description: 'Enough room for a serious amount of snacks.' },
+    { name: '10 pages', description: 'Perfect for a reasonable amount of snacks.' },
+    { name: '20 pages', description: 'Enough room for a serious amount of snacks.' },
   ],
 }
 const policies = [
@@ -599,7 +599,7 @@ const options = {
           <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:pt-24 sm:pb-32 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             {/* Product details */}
             <div className="lg:max-w-lg lg:self-end">
-              <nav aria-label="Breadcrumb">
+              {/* <nav aria-label="Breadcrumb">
                 <ol role="list" className="flex items-center space-x-2">
                   {product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
                     <li key={breadcrumb.id}>
@@ -622,7 +622,7 @@ const options = {
                     </li>
                   ))}
                 </ol>
-              </nav>
+              </nav> */}
 
               <div className="mt-4">
                 <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
@@ -663,10 +663,10 @@ const options = {
                   <p className="text-base text-gray-500">{product.description}</p>
                 </div>
 
-                <div className="mt-6 flex items-center">
+                {/* <div className="mt-6 flex items-center">
                   <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
                   <p className="ml-2 text-sm text-gray-500">In stock and ready to ship</p>
-                </div>
+                </div> */}
               </section>
             </div>
 
@@ -698,7 +698,7 @@ const options = {
                   <div className="sm:flex sm:justify-between">
                     {/* Size selector */}
                     <RadioGroup value={selectedSize} onChange={setSelectedSize}>
-                      <RadioGroup.Label className="block text-sm font-medium text-gray-700">Size</RadioGroup.Label>
+                      <RadioGroup.Label className="block text-sm font-medium text-gray-700">Order Size</RadioGroup.Label>
                       <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
                         {product.sizes.map((size) => (
                           <RadioGroup.Option
@@ -735,7 +735,7 @@ const options = {
                       </div>
                     </RadioGroup>
                   </div>
-                  <div className="mt-4">
+                  {/* <div className="mt-4">
                     <a href="#" className="group inline-flex text-sm text-gray-500 hover:text-gray-700">
                       <span>What size should I buy?</span>
                       <QuestionMarkCircleIcon
@@ -743,7 +743,7 @@ const options = {
                         aria-hidden="true"
                       />
                     </a>
-                  </div>
+                  </div> */}
                   <div className="mt-10">
                     <button
                       type="submit"
@@ -758,7 +758,7 @@ const options = {
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true"
                       />
-                      <span className="text-gray-500 hover:text-gray-700">Lifetime Guarantee</span>
+                      <span className="text-gray-500 hover:text-gray-700">Money-back Guarantee</span>
                     </a>
                   </div>
                 </form>
