@@ -150,7 +150,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: 'You & Yours: Give Meaningfully',
+  name: 'You & Yours: Gift Meaningfully',
   href: '#',
   price: '$20',
   description:
@@ -194,7 +194,7 @@ const policies = [
 ]
 const reviews = {
   average: 5,
-  totalCount: 3,
+  totalCount: 1,
   counts: [
     { rating: 5, count: 3 },
     { rating: 4, count: 0 },
