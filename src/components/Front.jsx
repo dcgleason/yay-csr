@@ -772,7 +772,7 @@ const options = {
                 How it works
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                We send an email to your gift contributors with prompts, ie questions, about your recipient, and then we collects your contributors' responses and compile their responses into a book for you to give to your recipient.
+                We send an email to your gift contributors with prompts, i.e. questions, about your recipient, and then we collect your contributors' responses and compile their responses into a book for you to give to your recipient.
               </p>
             </div>
 
@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 We send out a list of prompts via emails to your contributors, to facilitate the message writing process. A prompt may be like "What is your favorite quality of Eliza?" for example. Contributors have twpo weeks to reply with their responses. 
+                 We send out a list of prompts via email to your contributors to facilitate the message writing process. A prompt may be, "What is your favorite quality of Eliza?" for example. Contributors have two weeks to reply with their responses. 
                 </p>
               </div>
               <div>
