@@ -155,7 +155,7 @@ const product = {
   href: '#',
   price: '$20',
   description:
-    "The Most Meaningful Gift on Earth. You & Yours collects messages of positive sentiment from friends and familiy about a special person in your life and publishes them in a book for you to gift.",
+    "The Most Meaningful Gift on Earth. You & Yours collects written messages of positive sentiment from friends and familiy of a special person in your life, about that special person, and publishes said sentiments in a book for you to gift.",
   imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg',
   imageAlt: 'Light green canvas bag with black straps, handle, front zipper pouch, and drawstring top.',
   breadcrumbs: [
@@ -403,11 +403,11 @@ const options = {
               <div className="border-t border-gray-200 py-6 px-4">
                 <a href="#" className="-m-2 p-2 flex items-center">
                   <img
-                    src="https://tailwindui.com/img/flags/flag-canada.svg"
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
                   />
-                  <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                  <span className="ml-3 block text-base font-medium text-gray-900">USA</span>
                   <span className="sr-only">, change currency</span>
                 </a>
               </div>
@@ -559,11 +559,11 @@ const options = {
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="text-gray-700 hover:text-gray-800 flex items-center">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
                     />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
+                    <span className="ml-3 block text-sm font-medium">USA</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -698,7 +698,7 @@ const options = {
                   <div className="sm:flex sm:justify-between">
                     {/* Size selector */}
                     <RadioGroup value={selectedSize} onChange={setSelectedSize}>
-                      <RadioGroup.Label className="block text-sm font-medium text-gray-700">Order Size</RadioGroup.Label>
+                      <RadioGroup.Label className="block text-sm font-medium text-gray-700">Book Size</RadioGroup.Label>
                       <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
                         {product.sizes.map((size) => (
                           <RadioGroup.Option
@@ -957,7 +957,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                  src="/img/Neutral Calligraphy Initials Logo Template.png"
                   alt=""
                   className="h-8 w-auto"
                 />
