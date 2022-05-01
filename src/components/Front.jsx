@@ -168,27 +168,27 @@ const product = {
 }
 const policies = [
   {
-    name: 'Free delivery all year long',
+    name: 'Memorable',
     description:
-      'Name another place that offers year long free delivery? We’ll be waiting. Order now and you’ll get delivery absolutely free.',
+      'Gift a gift your family member or friend will remember for the rest of their lives.',
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
   {
     name: '24/7 Customer Support',
     description:
-      'Or so we want you to believe. In reality our chat widget is powered by a naive series of if/else statements that churn out canned responses. Guaranteed to irritate.',
+      'As a company, we are committed to answering any questions or addressing any concerns you might have, quickly. Email us and we will respond within 24 hours',
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg',
   },
   {
-    name: 'Fast Shopping Cart',
+    name: 'Fast turn around',
     description:
-      "Look at the cart in that icon, there's never been a faster cart. What does this mean for the actual checkout experience? I don't know.",
+      "Within three weeks, you'll have your Y&Y Gift Book at your door-step, ready to gift",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
   },
   {
-    name: 'Gift Cards',
+    name: 'Vouchers',
     description:
-      "We sell these hoping that you will buy them for your friends and they will never actually use it. Free money for us, it's great.",
+      "Not a great time for you to gift Y&Y Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg',
   },
 ]
@@ -1016,7 +1016,7 @@ const options = {
           </div>
 
           <div className="border-t border-gray-100 py-10 text-center">
-            <p className="text-sm text-gray-500">&copy; 2021 Workflow, Inc. All rights reserved.</p>
+            <p className="text-sm text-gray-500">&copy; 2022 You & Yours, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
