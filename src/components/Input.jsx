@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import {loadStripe} from '@stripe/stripe-js';
 import {
   PaymentElement,
   Elements,
@@ -258,7 +257,7 @@ const submitRequest = async (e) => {
           onSubmit={submitRequest}
         >
           <h2 className="text-2xl pt-6 pb-10 text-center font-medium text-gray-800">
-            Admin Console
+            Gift Details
           </h2>
           <div className="mb-4">
           <label
