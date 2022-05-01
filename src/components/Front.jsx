@@ -155,7 +155,7 @@ const product = {
   href: '#',
   price: '$20',
   description:
-    "The Most Meaningful Gift on Earth. You & Yours collects messages of positive sentiment about a person from their friends and familiy and publishes them in a book for you to gift.",
+    "The Most Meaningful Gift on Earth. You & Yours collects messages of positive sentiment from friends and familiy about a special person in your life and publishes them in a book for you to gift.",
   imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg',
   imageAlt: 'Light green canvas bag with black straps, handle, front zipper pouch, and drawstring top.',
   breadcrumbs: [
