@@ -234,12 +234,10 @@ const footerNavigation = {
   ],
   customerService: [
     { name: 'Contact', href: '#' },
-    { name: 'Shipping', href: '#' },
-    { name: 'Returns', href: '#' },
+    { name: 'Return Policy', href: '#' },
     { name: 'Warranty', href: '#' },
     { name: 'Secure Payments', href: '#' },
-    { name: 'FAQ', href: '#' },
-    { name: 'Find a store', href: '#' },
+    { name: 'FAQ', href: '#' }
   ],
 }
 
@@ -963,18 +961,6 @@ const options = {
               <div className="mt-10 col-span-6 grid grid-cols-2 gap-8 sm:grid-cols-3 md:mt-0 md:row-start-1 md:col-start-3 md:col-span-8 lg:col-start-2 lg:col-span-6">
                 <div className="grid grid-cols-1 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8">
                   <div>
-                    <h3 className="text-sm font-medium text-gray-900">Products</h3>
-                    <ul role="list" className="mt-6 space-y-6">
-                      {footerNavigation.products.map((item) => (
-                        <li key={item.name} className="text-sm">
-                          <a href={item.href} className="text-gray-500 hover:text-gray-600">
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
                     <h3 className="text-sm font-medium text-gray-900">Company</h3>
                     <ul role="list" className="mt-6 space-y-6">
                       {footerNavigation.company.map((item) => (
@@ -1004,7 +990,7 @@ const options = {
               {/* Newsletter section */}
               <div className="mt-12 md:mt-0 md:row-start-2 md:col-start-3 md:col-span-8 lg:row-start-1 lg:col-start-9 lg:col-span-4">
                 <h3 className="text-sm font-medium text-gray-900">Sign up for our newsletter</h3>
-                <p className="mt-6 text-sm text-gray-500">The latest deals and savings, sent to your inbox weekly.</p>
+                <p className="mt-6 text-sm text-gray-500">Sign up for our newsletter! Hits your inbox every Monday.</p>
                 <form className="mt-2 flex sm:max-w-md">
                   <label htmlFor="email-address" className="sr-only">
                     Email address
