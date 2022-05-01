@@ -772,7 +772,7 @@ const options = {
                 How it works
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                We send an email to your contributors with prompts, ie questions, about your recipient, and then we collects your contributors' responses and compile their responses into a book for you to give to your recipient.
+                We send an email to your gift contributors with prompts, ie questions, about your recipient, and then we collects your contributors' responses and compile their responses into a book for you to give to your recipient.
               </p>
             </div>
 
