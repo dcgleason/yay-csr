@@ -168,7 +168,7 @@ const product = {
 }
 const policies = [
   {
-    name: 'Memorable',
+    name: 'Create a special memory',
     description:
       'Gift a gift your family member or friend will remember for the rest of their lives.',
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
@@ -180,7 +180,7 @@ const policies = [
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg',
   },
   {
-    name: 'Fast turn around',
+    name: 'Fast turn-around',
     description:
       "Within three weeks, you'll have your Y&Y Gift Book at your door-step, ready to gift",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
