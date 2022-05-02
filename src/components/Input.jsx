@@ -280,7 +280,6 @@ const submitRequest = async (e) => {
   submitPayment();
   databasePost();
   sendEmails();
-  alert("Submitted!")
   };
 
 
