@@ -127,7 +127,8 @@ const submitPayment = async () => {
       props.clientSecret,
       {
         payment_method: {
-          card: elements.CardElement,
+          type: "card",
+          card: elements.getElement(CardElement),
           billing_details: {
             name: ownerName,
             email: ownerEmail
