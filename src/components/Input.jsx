@@ -13,6 +13,7 @@ const Input = (props) => {
   const [randomNumber, setRandomNumber] = useState(-1)
   const [name, setName] = useState(['']);
   const [data, setData] = useState([]);
+  const [ownerEmail, setOwnerEmail] = useState({email: ''});
   var intArray = []
   const stripe = useStripe();
   const elements = useElements();
@@ -109,6 +110,24 @@ const handleRemoveFields = id => {
  
 function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+const submitPayment = async () => {
+
+  // create customer and submit payment
+
+  const r =  await fetch("https://yay-api.herokuapp.com/submit", { 
+    method: 'POST', 
+    headers: { 
+      'Content-type': 'application/json'
+     }, 
+    body: JSON.stringify({
+      message_id: resultsArray[m]
+    }) 
+    }); 
+    const rData = await r.json(); 
+
 }
 
 
@@ -257,9 +276,39 @@ const submitRequest = async (e) => {
           onSubmit={submitRequest}
         >
           <h2 className="text-2xl pt-6 pb-10 text-center font-medium text-gray-800">
-            Gift Details
+            Your Gift Details
           </h2>
           <div className="mb-4">
+          <label
+              className="block text-gray-700 text-sm py-2 font-bold mb-2"
+              htmlFor="Email"
+            >
+             Your first and last name:
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              name="name"
+              placeholder="Full name gift-intiator"
+              onChange={e => setName(e.target.value)}
+              value={name}
+              required
+            />
+          <label
+              className="block text-gray-700 text-sm py-2 font-bold mb-2"
+              htmlFor="Email"
+            >
+              Your email address:
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              name="name"
+              placeholder="Email address of gift-initiator"
+              onChange={e => setName(e.target.value)}
+              value={name}
+              required
+            />
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
