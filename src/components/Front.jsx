@@ -150,7 +150,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: 'You & Yours. Share the love',
+  name: 'You & Yours. Share the love.',
   href: '#',
   price: '$20',
   description:
