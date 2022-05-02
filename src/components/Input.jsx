@@ -13,7 +13,8 @@ const Input = (props) => {
   const [randomNumber, setRandomNumber] = useState(-1)
   const [name, setName] = useState(['']);
   const [data, setData] = useState([]);
-  const [ownerEmail, setOwnerEmail] = useState({email: ''});
+  const [ownerEmail, setOwnerEmail] = useState('');
+  const [ownerName, setOwnerName] = useState('');
   var intArray = []
   const stripe = useStripe();
   const elements = useElements();
@@ -117,16 +118,23 @@ const submitPayment = async () => {
 
   // create customer and submit payment
 
+  console.log('ownerName: '+ ownerName);
+  console.log('ownerEmail: '+ ownerEmail);
+  console.log('clientSecret: '+ props.clientSecret);
+
   const r =  await fetch("https://yay-api.herokuapp.com/submit", { 
     method: 'POST', 
     headers: { 
       'Content-type': 'application/json'
      }, 
     body: JSON.stringify({
-      message_id: resultsArray[m]
+      ownerEmail: ownerEmail,
+      ownerName: ownerName,
+      clientSecret: props.clientSecret
     }) 
     }); 
-    const rData = await r.json(); 
+    const response = await r.json(); 
+    console.log('data returned from /submit api' + response.status);
 
 }
 
@@ -260,6 +268,7 @@ const sendEmails = async () => {
 
 const submitRequest = async (e) => {
   e.preventDefault();
+  submitPayment();
   databasePost();
   sendEmails();
   alert("Submitted!")
@@ -290,8 +299,8 @@ const submitRequest = async (e) => {
               type="text"
               name="name"
               placeholder="Full name of gift intiator"
-              onChange={e => setName(e.target.value)}
-              value={name}
+              onChange={e => setOwnerName(e.target.value)}
+              value={ownerName}
               required
             />
           <label
@@ -305,8 +314,8 @@ const submitRequest = async (e) => {
               type="text"
               name="name"
               placeholder="Email address of gift initiator"
-              onChange={e => setName(e.target.value)}
-              value={name}
+              onChange={e => setOwnerEmail(e.target.value)}
+              value={ownerEmail}
               required
             />
           <label
