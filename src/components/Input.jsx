@@ -141,7 +141,7 @@ const submitPayment = async () => {
       alert("Payment error: "+ paymentIntent.status.code + ", " + paymentIntent.status.decline_code);
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       console.log("Your payment has succeeded", paymentIntent.status)
-      alert("Thank you. Payment successful");
+      alert("Thank you. Your payment was successful. Emails will be sent to your gift contributor(s) shortly.");
      
     }
   })();
