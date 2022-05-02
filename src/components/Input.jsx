@@ -289,7 +289,7 @@ const submitRequest = async (e) => {
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
-              placeholder="Full name gift-intiator"
+              placeholder="Full name gift intiator"
               onChange={e => setName(e.target.value)}
               value={name}
               required
@@ -304,7 +304,7 @@ const submitRequest = async (e) => {
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
-              placeholder="Email address of gift-initiator"
+              placeholder="Email address of gift initiator"
               onChange={e => setName(e.target.value)}
               value={name}
               required
