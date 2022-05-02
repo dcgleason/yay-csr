@@ -274,7 +274,7 @@ const options = {
   }  
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-100">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40 lg:hidden" onClose={setOpen}>
