@@ -138,8 +138,11 @@ const submitPayment = async () => {
     );
     if (error) {
       console.log("There has been a payment error", error)
+      alert("Payment error: "+paymentIntent.status.decline_code);
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       console.log("Your payment has succeeded", paymentIntent.status)
+      alert("Thank you. Payment successful");
+     
     }
   })();
 }
