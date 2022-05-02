@@ -171,7 +171,7 @@ const policies = [
     name: 'Create a special memory',
     description:
       'Gift a gift your family member or friend will remember for the rest of their life.',
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
+    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg',
   },
   {
     name: '24/7 Customer Support',
