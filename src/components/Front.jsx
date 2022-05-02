@@ -171,7 +171,7 @@ const policies = [
     name: 'Create a special memory',
     description:
       'Gift a gift your family member or friend will remember for the rest of their life.',
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg',
+    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg', 
   },
   {
     name: '24/7 Customer Support',
@@ -188,8 +188,8 @@ const policies = [
   {
     name: 'Vouchers',
     description:
-      "Not a great time for you to gift a Y&Y Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know",
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg',
+      "Not a great time for you to gift aY&Y Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know",
+    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
 ]
 const reviews = {
