@@ -772,7 +772,7 @@ const options = {
                 How it works
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                We send an email to your gift contributors with prompts, i.e. questions, about your recipient, and then we collect your contributors' responses and compile their responses into a book for you to give to your recipient.
+                (it's a two-step process)
               </p>
             </div>
 
@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. Prompts are sent via email to your contributors to facilitate the message-writing process. A prompt may be, "What is your favorite quality of Eliza?" for example...if Eliza was recieving the gift. Contributors have two weeks to reply with their responses. 
+                 1. We send prompts via an email sent to your contributors to facilitate the message-writing process. A prompt may be, for example, "How has Eliza impacted your life for the better?" (if Eliza was recieving the gift). Contributors have two weeks to reply with their responses. 
                 </p>
               </div>
               <div>
@@ -798,7 +798,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. Within days after responses are collected, they are compiled and published into a book and sent to you, the gift initiator, for you to give to your recipient.
+                  2. After the two-week deadline, responses are compiled and published into a book within days. The completed book is sent to you, the gift initiator, for you to give to your recipient.
                 </p>
               </div>
             </div>
