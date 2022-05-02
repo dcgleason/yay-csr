@@ -886,7 +886,7 @@ const options = {
                 </dl>
               </div>
 
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <h3 className="text-lg font-medium text-gray-900">Share your thoughts</h3>
                 <p className="mt-1 text-sm text-gray-600">
                   If you’ve used this product, share your thoughts with other customers
@@ -898,7 +898,7 @@ const options = {
                 >
                   Write a review
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-16 lg:mt-0 lg:col-start-6 lg:col-span-7">
