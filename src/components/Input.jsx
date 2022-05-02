@@ -122,20 +122,25 @@ const submitPayment = async () => {
   console.log('ownerEmail: '+ ownerEmail);
   console.log('clientSecret: '+ props.clientSecret);
 
-  const r =  await fetch("https://yay-api.herokuapp.com/submit", { 
-    method: 'POST', 
-    headers: { 
-      'Content-type': 'application/json'
-     }, 
-    body: JSON.stringify({
-      ownerEmail: ownerEmail,
-      ownerName: ownerName,
-      clientSecret: props.clientSecret
-    }) 
-    }); 
-    const response = await r.json(); 
-    console.log('data returned from /submit api' + response.status);
-
+  (async () => {
+    const {paymentIntent, error} = await stripe.confirmCardPayment(
+      props.clientSecret,
+      {
+        payment_method: {
+          card: elements.CardElement,
+          billing_details: {
+            name: ownerName,
+            email: ownerEmail
+          },
+        },
+      },
+    );
+    if (error) {
+      console.log("There has been a payment error", error)
+    } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+      console.log("Your payment has succeeded", paymentIntent.status)
+    }
+  })();
 }
 
 
