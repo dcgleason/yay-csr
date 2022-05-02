@@ -755,7 +755,8 @@ const options = {
                         className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                         aria-hidden="true"
                       />
-                      <span className="text-gray-500 hover:text-gray-700">Money-back Guarantee</span>
+                      <span className="text-gray-500 hover:text-gray-700">Money-back Guarantee </span>
+                      <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-6xl text-black font-semibold">Dwayne</div>
                     </a>
                   </div>
                 </form>
