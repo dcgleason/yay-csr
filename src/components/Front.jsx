@@ -436,7 +436,7 @@ const options = {
                   <span className="sr-only">You&Yours</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://imgur.com/HFNw37c"
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/f1/You%26Yours.png"
                     alt=""
                   />
                 </a>
@@ -950,7 +950,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://imgur.com/HFNw37c"
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f1/You%26Yours.png"
                   alt=""
                   className="h-8 w-auto"
                 />
