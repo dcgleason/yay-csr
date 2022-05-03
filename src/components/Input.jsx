@@ -17,6 +17,14 @@ const Input = (props) => {
   const [data, setData] = useState([]);
   const [ownerEmail, setOwnerEmail] = useState('');
   const [ownerName, setOwnerName] = useState('');
+  const [address, setAddress] = useState('');
+  const [apartment, setApartment] = useState('');
+  const [zip, setZip] = useState('');
+  const [city, setCity] = useState('');
+  const [phone, setPhone] = useState('');
+  const [country, setCountry] = useState('United States');
+  const [state, setState] = useState('');
+
   var intArray = []
   const stripe = useStripe();
   const elements = useElements();
@@ -317,6 +325,8 @@ const submitRequest = async (e) => {
                   <input
                     type="text"
                     name="address"
+                    onChange={e => setAddress(e.target.value)}
+                    value={address}
                     placeholder="123 Main St."
                     id="address"
                     autoComplete="street-address"
@@ -332,6 +342,8 @@ const submitRequest = async (e) => {
                 <div className="mt-1">
                   <input
                     type="text"
+                    onChange={e => setApartment(e.target.value)}
+                    value={apartment}
                     name="apartment"
                     placeholder="Apt 1A"
                     id="apartment"
@@ -349,6 +361,8 @@ const submitRequest = async (e) => {
                     type="text"
                     name="city"
                     id="city"
+                    onChange={e => setCity(e.target.value)}
+                    value={city}
                     placeholder="Boston"
                     autoComplete="address-level2"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -364,6 +378,8 @@ const submitRequest = async (e) => {
                   <select
                     id="country"
                     name="country"
+                    onChange={e => setCountry(e.target.value)}
+                    value={country}
                     autoComplete="country-name"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   >
@@ -383,6 +399,8 @@ const submitRequest = async (e) => {
                     type="text"
                     name="region"
                     id="region"
+                    onChange={e => setState(e.target.value)}
+                    value={state}
                     placeholder="MA"
                     autoComplete="address-level1"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -398,6 +416,8 @@ const submitRequest = async (e) => {
                   <input
                     type="text"
                     name="postal-code"
+                    onChange={e => setZip(e.target.value)}
+                    value={zip}
                     id="postal-code"
                     placeholder="02117"
                     autoComplete="postal-code"
@@ -414,6 +434,8 @@ const submitRequest = async (e) => {
                   <input
                     type="text"
                     name="phone"
+                    onChange={e => setPhone(e.target.value)}
+                    value={phone}
                     placeholder="(555) 555-5555"
                     id="phone"
                     autoComplete="tel"
