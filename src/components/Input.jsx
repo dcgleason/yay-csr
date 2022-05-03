@@ -448,7 +448,7 @@ const submitRequest = async (e) => {
               className="block text-gray-700 text-sm py-2 font-bold"
               htmlFor="Email"
             >
-             Credit Card number
+             Debit / Credit Card
             </label>
 
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
