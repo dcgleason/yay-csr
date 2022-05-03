@@ -264,7 +264,7 @@ const submitRequest = async (e) => {
           onSubmit={submitRequest}
         >
           <h2 className="text-2xl pt-6 pb-10 text-center font-medium text-gray-800">
-            Order Gift Book
+            Order Gift
           </h2>
           <div className="mb-4">
           <label
