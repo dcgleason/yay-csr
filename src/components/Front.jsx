@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. We send prompts via an email sent to your contributors to facilitate the message-writing process. A prompt may be, for example, "How has Eliza impacted your life for the better?" (if Eliza was recieving the gift). Contributors have two weeks to reply with their responses. 
+                 1. We send prompts via an email sent to your gift contributors to facilitate the message-writing process. A prompt may be, for example, "How has Eliza impacted your life for the better?" (if Eliza was recieving the gift). Contributors have two weeks to reply with their responses. 
                 </p>
               </div>
               <div>
