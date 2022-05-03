@@ -314,7 +314,7 @@ const submitRequest = async (e) => {
             {  ownerEmail.length >= 1 ?
            (
            <>
-           <h2 className="text-lg pt-5 font-medium text-center text-gray-900">Shipping Info</h2>
+           <h2 className="text-lg pt-5 font-medium text-center text-gray-900">Shipping Information</h2>
             <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
   
               <div className="sm:col-span-2">
