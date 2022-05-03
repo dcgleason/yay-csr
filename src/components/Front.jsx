@@ -152,7 +152,7 @@ const userNavigation = [
 const product = {
   name: 'You & Yours. Share the love.',
   href: '#',
-  price: '$20',
+  price: '$20 / book',
   description:
    '',
   imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg',
