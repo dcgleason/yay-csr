@@ -436,7 +436,7 @@ const options = {
                   <span className="sr-only">You&Yours</span>
                   <img
                     className="h-8 w-auto"
-                    src="img/y.svg"
+                    src="https://www.canva.com/design/DAE_qEkd1vY/exK1WHIG-FTv4gPAPwTSJg/view?utm_content=DAE_qEkd1vY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                     alt=""
                   />
                 </a>
@@ -950,7 +950,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="/img/Neutral Calligraphy Initials Logo Template.png"
+                  src="https://www.canva.com/design/DAE_qEkd1vY/exK1WHIG-FTv4gPAPwTSJg/view?utm_content=DAE_qEkd1vY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                   alt=""
                   className="h-8 w-auto"
                 />
