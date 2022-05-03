@@ -433,10 +433,10 @@ const options = {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Workflow</span>
+                  <span className="sr-only">You&Yours</span>
                   <img
                     className="h-8 w-auto"
-                    src="/img/Neutral Calligraphy Initials Logo Template.png"
+                    src="img/y.svg"
                     alt=""
                   />
                 </a>
