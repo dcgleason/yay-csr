@@ -250,7 +250,7 @@ const submitRequest = async (e) => {
   submitPayment();
   databasePost();
   sendEmails();
-  alert('Form submitted (Y&Y is still in development - your card was not charged!)')
+  alert('Form submitted. Y&Y is still in development - your card was not charged!')
   };
 
 
