@@ -265,8 +265,11 @@ const submitRequest = async (e) => {
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-gray-200 border"
           onSubmit={submitRequest}
         >
-          <h2 className="text-2xl pt-6 pb-10 text-center font-medium text-gray-800">
+          <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
             Order Gift
+          </h1>
+          <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
+            Your Information
           </h2>
           <div className="mb-4">
           <label
@@ -303,7 +306,7 @@ const submitRequest = async (e) => {
             {  ownerEmail.length >= 1 ?
            (
            <>
-           <h2 className="text-lg pt-5 font-medium text-gray-900">Your Shipping Information</h2>
+           <h2 className="text-lg pt-5 font-medium text-center text-gray-900">Shipping information</h2>
             <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
   
               <div className="sm:col-span-2">
@@ -435,7 +438,9 @@ const submitRequest = async (e) => {
           
             {/* Shipping information bottom */}  
         
-          
+            <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
+            Gift Information
+          </h2>
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
