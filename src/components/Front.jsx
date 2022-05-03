@@ -441,7 +441,6 @@ const options = {
                   />
                 </a>
               </div>
-
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="h-full flex space-x-8">
