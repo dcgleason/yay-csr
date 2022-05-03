@@ -154,7 +154,7 @@ const product = {
   href: '#',
   price: '$20',
   description:
-    "You & Yours collects written, positive messages about and for a special person in your life from his or her friends and familiy, publishes those messages in a book, and then sends the book to you so that you can give it to that person. All in 3 weeks.",
+    "You & Yours collects written, positive messages about and for a special person in your life from his or her friends and familiy, publishes those messages in a book, and then sends that book to you so that you can give it to that person. All in 3 weeks.",
   imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg',
   imageAlt: 'Light green canvas bag with black straps, handle, front zipper pouch, and drawstring top.',
   breadcrumbs: [
