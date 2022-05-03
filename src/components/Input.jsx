@@ -303,7 +303,7 @@ const submitRequest = async (e) => {
             {  ownerEmail.length >= 1 ?
            (
            <>
-           <h2 className="text-lg pt-5 font-medium text-gray-900">Shipping Address</h2>
+           <h2 className="text-lg pt-5 font-medium text-gray-900">Your Shipping Information</h2>
             <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
   
               <div className="sm:col-span-2">
@@ -323,7 +323,7 @@ const submitRequest = async (e) => {
               </div>
 
               <div className="sm:col-span-2">
-                <label htmlFor="apartment"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                <label htmlFor="apartment"  className="block text-gray-700 text-sm py-2 font-bold">
                   Apartment, suite, etc.
                 </label>
                 <div className="mt-1">
@@ -332,13 +332,13 @@ const submitRequest = async (e) => {
                     name="apartment"
                     placeholder="Apt 1A"
                     id="apartment"
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="city"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                <label htmlFor="city"  className="block text-gray-700 text-sm py-2 font-bold">
                   City
                 </label>
                 <div className="mt-1">
@@ -354,7 +354,7 @@ const submitRequest = async (e) => {
               </div>
 
               <div>
-                <label htmlFor="country"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                <label htmlFor="country"  className="block text-gray-700 text-sm py-2 font-bold">
                   Country
                 </label>
                 <div className="mt-1">
@@ -372,7 +372,7 @@ const submitRequest = async (e) => {
               </div>
 
               <div>
-                <label htmlFor="region"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                <label htmlFor="region"  className="block text-gray-700 text-sm py-2 font-bold">
                   State / Province
                 </label>
                 <div className="mt-1">
@@ -382,13 +382,13 @@ const submitRequest = async (e) => {
                     id="region"
                     placeholder="MA"
                     autoComplete="address-level1"
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="postal-code"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                <label htmlFor="postal-code"  className="block text-gray-700 text-sm py-2 font-bold">
                   Postal code
                 </label>
                 <div className="mt-1">
@@ -398,13 +398,13 @@ const submitRequest = async (e) => {
                     id="postal-code"
                     placeholder="02117"
                     autoComplete="postal-code"
-                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                 </div>
               </div>
 
               <div className="sm:col-span-2">
-                <label htmlFor="phone" className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                <label htmlFor="phone" className="block text-gray-700 text-sm py-2 font-bold">
                   Phone
                 </label>
                 <div className="mt-1">
@@ -420,7 +420,7 @@ const submitRequest = async (e) => {
               </div>
             </div>
             <label
-              className="block text-gray-700 text-sm py-2 font-bold mb-2"
+              className="block text-gray-700 text-sm py-2 font-bold"
               htmlFor="Email"
             >
              Credit Card number
