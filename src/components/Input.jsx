@@ -7,6 +7,8 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
+import { Shipping } from "../components/index"
+
 
 const Input = (props) => {
   const [emails, setEmail] = useState([ { id: uuidv4(),  email: '' }]);
@@ -297,7 +299,127 @@ const submitRequest = async (e) => {
               value={ownerEmail}
               required
             />
-          <label
+            {/* Shipping information top */}  
+            {  ownerEmail.length >= 1 ?
+           (
+           <>
+           <h2 className="text-lg pt-5 font-medium text-gray-900">Shipping Address</h2>
+            <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
+  
+              <div className="sm:col-span-2">
+                <label htmlFor="address"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  Address
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="address"
+                    placeholder="123 Main St."
+                    id="address"
+                    autoComplete="street-address"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label htmlFor="apartment"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  Apartment, suite, etc.
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="apartment"
+                    placeholder="Apt 1A"
+                    id="apartment"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="city"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  City
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="Boston"
+                    autoComplete="address-level2"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="country"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  Country
+                </label>
+                <div className="mt-1">
+                  <select
+                    id="country"
+                    name="country"
+                    autoComplete="country-name"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="region"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  State / Province
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="region"
+                    id="region"
+                    placeholder="MA"
+                    autoComplete="address-level1"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="postal-code"  className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  Postal code
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="postal-code"
+                    id="postal-code"
+                    placeholder="02117"
+                    autoComplete="postal-code"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label htmlFor="phone" className="block text-gray-700 text-sm py-2 font-bold mb-2">
+                  Phone
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="(555) 555-5555"
+                    id="phone"
+                    autoComplete="tel"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+              </div>
+            </div>
+            <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
@@ -305,6 +427,14 @@ const submitRequest = async (e) => {
             </label>
 
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+          
+            </>
+           )
+          : <div></div> 
+          }
+          
+            {/* Shipping information bottom */}  
+        
           
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"

@@ -1,7 +1,7 @@
 
 import logo from './logo.svg'
 import './App.css'
-import { Input, Front } from "./components/index"
+import { Input, Front, Shipping } from "./components/index"
 import React from 'react';
 import './index.css'
 
