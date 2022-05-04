@@ -576,16 +576,20 @@ setIsLoading(false);
               required
             />
             ))}
-       {isLoading ? <LoadingSpinner /> : <div/>}
+     
+     {isLoading ? 
+          <LoadingSpinner /> : 
           <div className="flex items-center justify-between">
-            <button
+         
+           <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-6 w-full rounded focus:outline-none focus:shadow-outline"
               type="submit"
               onClick={submitRequest}
             >
               Submit Payment & Initate Gift
-            </button>
+            </button> 
           </div>
+}
           </div>
         </form>
         <div className="inline-flex">
