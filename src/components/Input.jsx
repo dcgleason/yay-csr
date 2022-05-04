@@ -3,6 +3,7 @@ import Alert from '@material-ui/lab/Alert';
 import AlertTitle from '@material-ui/lab/AlertTitle';
 import Dialog from "@mui/material/Dialog";
 import { useForm } from 'react-hook-form'
+import LoadingSpinner from "./LoadingSpinner"
 import { v4 as uuidv4 } from 'uuid';
 import {
   PaymentElement,
@@ -40,6 +41,7 @@ const Input = (props) => {
     type: "error",
     open: false
   });
+  const [isLoading, setIsLoading] = useState(false);
   var intArray = []
   const stripe = useStripe();
   const elements = useElements();
@@ -125,6 +127,7 @@ const submitPayment = async () => {
  
   // create customer and submit payment
 
+  setIsLoading(true);
   console.log('ownerName: '+ ownerName);
   console.log('ownerEmail: '+ ownerEmail);
   console.log('clientSecret: '+ props.clientSecret);
@@ -312,11 +315,13 @@ const submitRequest = async (e) => {
   const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
 console.log(result);
+setIsLoading(false);
 };
 
 
   return (
     <div>
+
       <Dialog open={alert.open} onClose={handleClick}>
         <Alert
           severity={alert.type}
@@ -571,9 +576,7 @@ console.log(result);
               required
             />
             ))}
-            
-            
-
+       {isLoading ? <LoadingSpinner /> : <div/>}
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-6 w-full rounded focus:outline-none focus:shadow-outline"
@@ -592,6 +595,7 @@ console.log(result);
             <button disabled={emails.length === 1} onClick={() => handleRemoveFields(emails.id)} className="bg-gray-300 hover:bg-gray-400 text-gray-800 border-4 py-1 px-2 rounded-r">
              <span className='font-bold'> Remove Contributor </span>
             </button>
+           
            </div>
       </div>
       
