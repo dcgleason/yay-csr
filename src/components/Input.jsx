@@ -121,10 +121,14 @@ const submitPayment = async () => {
       alert("Payment error: "+ paymentIntent.status.code + ", " + paymentIntent.status.decline_code);
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       console.log("Your payment has succeeded", paymentIntent.status)
+      databasePost();
+      sendEmails();
       alert("Thank you. Your payment of $20 was successful. Emails will be sent to your gift contributor(s) shortly.");
      
     }
   })();
+
+
 }
 
 
@@ -255,12 +259,11 @@ const sendEmails = async () => {
 }
 
 
+
 const submitRequest = async (e) => {
   e.preventDefault();
   submitPayment();
-  databasePost();
-  sendEmails();
-  alert('Form submitted. Y&Y is still in development - your card was not charged!')
+ // alert('Form submitted. Y&Y is still in development - your card was not charged!')
   };
 
 
@@ -331,6 +334,7 @@ const submitRequest = async (e) => {
                     id="address"
                     autoComplete="street-address"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
                   />
                 </div>
               </div>
@@ -348,7 +352,7 @@ const submitRequest = async (e) => {
                     placeholder="Apt 1A"
                     id="apartment"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
+                 />
                 </div>
               </div>
               <div>
@@ -365,6 +369,7 @@ const submitRequest = async (e) => {
                     placeholder="Boston"
                     autoComplete="address-level2"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
                   />
                 </div>
               </div>
@@ -381,7 +386,8 @@ const submitRequest = async (e) => {
                     value={country}
                     autoComplete="country-name"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  >
+                    required
+                 >
                     <option>United States</option>
                     <option>Canada</option>
                     <option>Mexico</option>
@@ -403,6 +409,7 @@ const submitRequest = async (e) => {
                     placeholder="MA"
                     autoComplete="address-level1"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
                   />
                 </div>
               </div>
@@ -421,7 +428,8 @@ const submitRequest = async (e) => {
                     placeholder="02117"
                     autoComplete="postal-code"
                     className="shadow appearance-none border rounded w-full mt-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
+                    required
+                 />
                 </div>
               </div>
 
@@ -439,7 +447,8 @@ const submitRequest = async (e) => {
                     id="phone"
                     autoComplete="tel"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
+                    required
+                 />
                 </div>
               </div>
             </div>
@@ -449,9 +458,7 @@ const submitRequest = async (e) => {
             >
              Debit / Credit Card
             </label>
-
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-          
             </>
            )
           : <div></div> 
