@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. Prompts, i.e. questions, about the gift recipient are sent via email to your gift contributors to facilitate the message-writing process. A prompt may be, for example, "How has Eliza impacted your life for the better?" (if Eliza was recieving the gift). Contributors have two weeks to reply with their responses. 
+                 1. Prompts, i.e. questions, about the gift recipient are sent via email to your gift contributors to facilitate the message-writing process. If Eliza were the recipient, for example, "how has Eliza impacted your life for the better?" would be a prompt. Contributors have two weeks to reply with their responses. 
                 </p>
               </div>
               <div>
