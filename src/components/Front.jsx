@@ -176,19 +176,19 @@ const policies = [
   {
     name: '24/7 Customer Support',
     description:
-      'As a company, we are committed to answering any questions or addressing any concerns you might have, quickly. Email us and we will respond within 24 hours',
+      'As a company, we are committed to answering any questions or addressing any concerns you might have, quickly. Email us and we will respond within 24 hours.',
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg',
   },
   {
     name: 'Fast turn-around',
     description:
-      "Within three weeks after ordering, you'll have your Y&Y Gift Book at your door-step, ready to gift",
+      "Within three weeks after ordering, you'll have your Y&Y Gift Book at your door-step, ready to gift.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
   },
   {
     name: 'Vouchers',
     description:
-      "Not a great time for you to gift a Y&Y Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know",
+      "Not a great time for you to gift a Y&Y Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
 ]
