@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Alert from '@material-ui/lab/Alert';
+import AlertTitle from '@material-ui/lab/AlertTitle';
+import Dialog from "@mui/material/Dialog";
+import { useForm } from 'react-hook-form'
 import { v4 as uuidv4 } from 'uuid';
 import {
   PaymentElement,
@@ -7,7 +11,7 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
-import { Shipping } from "../components/index"
+
 
 
 const Input = (props) => {
@@ -24,11 +28,22 @@ const Input = (props) => {
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState('United States');
   const [state, setState] = useState('');
-
+  const [alert, setAlert] = useState({
+    type: 'error',
+    text: '',
+    title: 'Error',
+    open: false
+  })
+  const [ paymentStatus, setPaymentStatus ] = useState({
+    status: null,
+    title: "Error",
+    type: "error",
+    open: false
+  });
   var intArray = []
   const stripe = useStripe();
   const elements = useElements();
-
+  const { register, handleSubmit } = useForm();
  
   useEffect(() => {
   const fetchData = async () => {
@@ -46,6 +61,16 @@ const Input = (props) => {
      }
     fetchData();
     }, [])
+
+    useEffect(() => {
+      setAlert({
+        type: paymentStatus.type,
+        text: paymentStatus.status,
+        title: paymentStatus.title,
+        open: paymentStatus.open
+      }); // This will always use latest value of count
+  }, [paymentStatus]);
+
 
 const generateUniqueRandom = async () => {
     //Generate random number
@@ -65,6 +90,7 @@ const generateUniqueRandom = async () => {
         }
     }
 }
+
 
   const handleChangeInput = (id, e) => {
     generateUniqueRandom();
@@ -95,14 +121,15 @@ function timeout(ms) {
 
 
 const submitPayment = async () => {
-
+  
+ 
   // create customer and submit payment
 
   console.log('ownerName: '+ ownerName);
   console.log('ownerEmail: '+ ownerEmail);
   console.log('clientSecret: '+ props.clientSecret);
 
-  (async () => {
+  //(async () => {
     const {paymentIntent, error} = await stripe.confirmCardPayment(
       props.clientSecret,
       {
@@ -117,16 +144,31 @@ const submitPayment = async () => {
       },
     );
     if (error) {
-      console.log("There has been a payment error", error)
-      alert("Payment error: "+ paymentIntent.status.code + ", " + paymentIntent.status.decline_code);
+      setPaymentStatus({
+        status: "Error: " + error.message,
+        title: "Error",
+        type: "error",
+        open: true
+      })
+      console.log("There has been a payment error", error.message)
+    return 'submitpayment function complete - error'
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       console.log("Your payment has succeeded", paymentIntent.status)
+      setPaymentStatus({
+          status: "Your payment of $50 dollars succeeded",
+          title: "Success",
+          type: "success",
+          open: true
+        })
       databasePost();
       sendEmails();
-      alert("Thank you. Your payment of $20 was successful. Emails will be sent to your gift contributor(s) shortly.");
+    return 'submitpayment function complete - success'
+
+      
      
     }
-  })();
+//  })();
+
 
 
 }
@@ -258,17 +300,44 @@ const sendEmails = async () => {
         }
 }
 
+const handleClick = () => {
+  setAlert({
+    open: false
+  })
+}
 
 
 const submitRequest = async (e) => {
   e.preventDefault();
-  submitPayment();
+  const result = await submitPayment();
  // alert('Form submitted. Y&Y is still in development - your card was not charged!')
-  };
+console.log(result);
+};
 
 
   return (
     <div>
+      <Dialog open={alert.open} onClose={handleClick}>
+        <Alert
+          severity={alert.type}
+          color={alert.type}
+          role="button"
+          onClose={() => handleClick()}
+          closeText="Doesn't Work!"
+          sx={{
+            width: '80%',
+            margin: 'auto',
+            "& .MuiAlert-icon": {
+              color: "blue"
+            }
+            //backgroundColor: "green"
+          }}
+        >
+          <AlertTitle>{alert.title}</AlertTitle>
+          {alert.text}
+        </Alert>
+      </Dialog>
+      
       <div className="flex flex-col items-center justify-around bg-gray-200"></div>
       <div className="w-full max-w-sm m-auto flex flex-col my-32">
 
@@ -509,6 +578,7 @@ const submitRequest = async (e) => {
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-6 w-full rounded focus:outline-none focus:shadow-outline"
               type="submit"
+              onClick={submitRequest}
             >
               Submit Payment & Initate Gift
             </button>
@@ -527,6 +597,8 @@ const submitRequest = async (e) => {
       
       
     </div>
+
+    
   );
 };
 

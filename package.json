@@ -9,8 +9,12 @@
     "start": "react-stripe start"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@headlessui/react": "^1.6.0",
     "@heroicons/react": "^1.0.6",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@mui/material": "^5.6.4",
     "@stripe/react-stripe-js": "^1.7.2",
     "@stripe/stripe-js": "^1.29.0",
     "add": "^2.0.6",
@@ -28,6 +32,7 @@
     "pg-format": "^1.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.30.0",
     "react-icons": "^4.3.1",
     "react-request": "^3.2.0",
     "react-uuid": "^1.0.2",
