@@ -509,7 +509,7 @@ setIsLoading(false);
 
               <div className="sm:col-span-2">
                 <label htmlFor="phone" className="block text-gray-700 text-sm pb-2 font-bold">
-                  Phone
+                  Phone number
                 </label>
                 <div className="mt-1">
                   <input
