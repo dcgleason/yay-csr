@@ -33,6 +33,22 @@ const Messages = () => {
                 </div>
               </div>
             </div>
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Your gift code (provided to you via email):
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={2}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                  defaultValue={''}
+                />
+                </div>
+              </div>
+            </div>
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="about" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
