@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. Prompts, i.e. questions, about the gift recipient are sent via email to your gift contributors to facilitate the message-writing process. If Eliza were the recipient, for example, "how has Eliza impacted your life for the better?" would be a prompt. Contributors have two weeks to reply with their responses. 
+                 1. A gift code, which one can input on our "Write" page (link found in the navigation bar), will be sent to you and all of gift contributors via email. Contributors have two weeks to answer questions on the "Write" page. 
                 </p>
               </div>
               <div>
