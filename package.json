@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 8080",
-    "start": "react-stripe start"
+    "start": "vite build"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
