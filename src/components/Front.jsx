@@ -142,7 +142,8 @@ const navigation = {
     // },
   ],
   pages: [
-    { name: 'Home', href: '#' }
+    { name: 'Home', href: '#' },
+    { name: "Write", href: 'https://youandyours.netlify.app/messages'}
   ],
 }
 const userNavigation = [
