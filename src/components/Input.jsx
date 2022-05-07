@@ -184,13 +184,23 @@ const databasePost = async () => {
         'Content-type': 'application/json'
        }, 
       body: JSON.stringify({
-        unique_id: randomNumber,
-        name: name
+        email_id: randomNumber,
+        name: name,
+        ownerName: ownerName,
+        ownerEmail: ownerEmail,
+        address: address,
+        apartment: apartment,
+        city: city,
+        state: state,
+        zipCode: zip,
+        country: country,
+        phone: phone
+        
       }) 
       }); 
     const rData = await responseEmail.json(); 
     if (rData.status === 'success'){
-     alert("Message Sent."); 
+     alert("Message with owner and recipeint info sent Sent."); 
       this.resetForm()
      }else if(rData.status === 'fail'){
        alert("Message failed to send.")
@@ -201,6 +211,8 @@ const databasePost = async () => {
 const sendEmails = async () => {
       const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
       try {
+
+
             for(var j=0; j<emails.length; j++){
               if(emails[j]){
                 (async function(j){
