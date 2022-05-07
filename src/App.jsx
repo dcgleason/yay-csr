@@ -17,7 +17,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route  path="/" exact element={<Front/>}/>
-        <Route  path="/messages" exact element={<Messages/>}/>
+        <Route  path="/write" exact element={<Messages/>}/>
       </Routes>
     </BrowserRouter>
 
