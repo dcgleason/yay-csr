@@ -12,7 +12,7 @@ const Messages = () => {
           <div>
             <h3 className="text-lg mt-20 leading-6 font-medium text-gray-900">Message writing</h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              Please answer the questions below about the gif recipient.
+              Please answer the questions below about the gift recipient.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ const Messages = () => {
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
-                <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+                <p className="mt-2 text-sm text-gray-500">Reponse 1</p>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ const Messages = () => {
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
-                <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+                <p className="mt-2 text-sm text-gray-500">Response 2</p>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ const Messages = () => {
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
-                <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+                <p className="mt-2 text-sm text-gray-500">Response 3</p>
               </div>
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -93,7 +93,7 @@ const Messages = () => {
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
-                <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+                <p className="mt-2 text-sm text-gray-500">Response 4</p>
               </div>
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -108,7 +108,7 @@ const Messages = () => {
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
-                <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+                <p className="mt-2 text-sm text-gray-500">Response 5</p>
               </div>
             </div>
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -123,7 +123,7 @@ const Messages = () => {
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
-                <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+                <p className="mt-2 text-sm text-gray-500">Resonse 6</p>
               </div>
             </div>
           </div>
