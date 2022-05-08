@@ -331,7 +331,7 @@ setIsLoading(false);
 };
 
 
-const postOrderMongoDB = () => {
+const postOrderMongoDB = async () => {
   try{
     const resp =  await fetch("https://yay-api.herokuapp.com/order", { 
       method: 'POST', 

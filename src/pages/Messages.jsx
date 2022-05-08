@@ -12,7 +12,7 @@ const Messages = () => {
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
 
-  const postMessagesMongoDB = () => {
+  const postMessagesMongoDB = async () => {
     try{
       const resp =  await fetch("https://yay-api.herokuapp.com/messages", { 
         method: 'POST', 
