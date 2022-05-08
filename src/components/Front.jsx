@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. From the "Write" page (link in the navigation bar), a contributor can input their messages for a recipient by entering in the gift code sent to their email and answering the prompts on the page. Contributors have two weeks submit their responses. 
+                 1. From the "Write" page (link in the navigation bar), a contributor can input their messages for a recipient by answering the prompts on the page and then entering the gift code (which was sent to their email), which links their messages to their recipient's git. Contributors have two weeks to write and submit their messages. 
                 </p>
               </div>
               <div>
