@@ -1,8 +1,16 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Messages = () => {
+
+  const [ responseOne, setResponseOne] = useState('');
+  const [ responseTwo, setResponseTwo] = useState('');
+  const [ responseThree, setResponseThree] = useState('');
+  const [ responseFour, setResponseFour] = useState('');
+  const [ responseFive, setResponseFive] = useState('');
+  const [ additionalComments, setAdditionalComments ] = useState('');
+  const [ contributorName, setContributorName ] = useState('');
+  const [ giftCode, setGiftCode ] = useState('');
 
   return (
     <>
@@ -27,6 +35,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={2}
+                  onChange={e => setContributorName(e.target.value)}
+                  value={contributorName}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -43,6 +53,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={2}
+                  onChange={e => setGiftCode(e.target.value)}
+                  value={giftCode}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -59,6 +71,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={4}
+                  onChange={e => setResponseOne(e.target.value)}
+                  value={responseOne}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -75,6 +89,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={4}
+                  onChange={e => setResponseTwo(e.target.value)}
+                  value={responseTwo}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -91,6 +107,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={4}
+                  onChange={e => setResponseThree(e.target.value)}
+                  value={responseThree}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -106,6 +124,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={4}
+                  onChange={e => setResponseFour(e.target.value)}
+                  value={responseFour}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -121,6 +141,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={4}
+                  onChange={e => setResponseFive(e.target.value)}
+                  value={responseFive}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -136,6 +158,8 @@ const Messages = () => {
                   id="about"
                   name="about"
                   rows={4}
+                  onChange={e => setAdditionalComments(e.target.value)}
+                  value={additionalComments}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
