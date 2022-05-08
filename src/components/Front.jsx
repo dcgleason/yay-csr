@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. On our "Write Page" (link in the navigation bar), a contributor can input their messages to the recipient and their gift code (gift code provided to them via email). Contributors have two weeks submit their messages. 
+                 1. On our "Write" page (link in the navigation bar), a contributor can input their messages to the recipient and their gift code (gift code provided to them via email). Contributors have two weeks submit their messages. 
                 </p>
               </div>
               <div>
