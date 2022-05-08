@@ -33,7 +33,9 @@ const Messages = () => {
 
   return (
     <>
-      <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border">
+      <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
+        onSubmit={postMessagesMongoDB}
+        >
       <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
           <div>
