@@ -12,6 +12,25 @@ const Messages = () => {
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
 
+  const postMessagesMongoDB = () => {
+    try{
+      const resp =  await fetch("https://yay-api.herokuapp.com/messages", { 
+        method: 'POST', 
+        headers: { 
+          'Content-type': 'application/json'
+         }, 
+        body: JSON.stringify({
+          contributorName: contributorName,
+          giftCode: giftCode,
+          messages:  [responseOne, responseTwo, responseThree, responseFour, responseFive, additionalComments]
+        }) 
+        }); 
+    }
+    catch{
+      console.error(error)
+    }
+  }
+
   return (
     <>
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border">

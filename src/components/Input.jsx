@@ -163,7 +163,7 @@ const submitPayment = async () => {
           type: "success",
           open: true
         })
-      databasePost();
+      postOrderMongoDB()
       sendEmails();
     return 'submitpayment function complete - success'
 
@@ -330,6 +330,39 @@ console.log(result);
 setIsLoading(false);
 };
 
+
+const postOrderMongoDB = () => {
+  try{
+    const resp =  await fetch("https://yay-api.herokuapp.com/order", { 
+      method: 'POST', 
+      headers: { 
+        'Content-type': 'application/json'
+       }, 
+      body: JSON.stringify({
+        createdAt: Date.now(),
+          owner: {
+            ownerName: ownerName,
+            ownerEmail: ownerEmail,
+            shipping: {
+              address: address + " " + apartment,
+              city: city,
+              state: state,
+              zipCode: zip,
+              country: country,
+              phone: phone,
+            }
+          },
+          gift: {
+              giftCode: randomNumber,
+              recipient: name
+          }
+      }) 
+      }); 
+  }
+  catch{
+    console.error(error)
+  }
+}
 
   return (
     <div>
