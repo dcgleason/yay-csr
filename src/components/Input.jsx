@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Alert from '@material-ui/lab/Alert';
 import AlertTitle from '@material-ui/lab/AlertTitle';
 import Dialog from "@mui/material/Dialog";
-import { useForm } from 'react-hook-form'
 import LoadingSpinner from "./LoadingSpinner"
 import { v4 as uuidv4 } from 'uuid';
 import {
@@ -19,7 +18,6 @@ const Input = (props) => {
   const [emails, setEmail] = useState([ { id: uuidv4(),  email: '' }]);
   const [randomNumber, setRandomNumber] = useState(-1)
   const [name, setName] = useState(['']);
-  const [data, setData] = useState([]);
   const [ownerEmail, setOwnerEmail] = useState('');
   const [ownerName, setOwnerName] = useState('');
   const [address, setAddress] = useState('');
@@ -42,25 +40,31 @@ const Input = (props) => {
     open: false
   });
   const [isLoading, setIsLoading] = useState(false);
-  var intArray = []
   const stripe = useStripe();
   const elements = useElements();
-  const { register, handleSubmit } = useForm();
  
   useEffect(() => {
+
   const fetchData = async () => {
+    var random = Number((Math.random() * 1000000000).toFixed())
       // get the data from the api
-      const response = await fetch('https://yay-api.herokuapp.com/unique');
-      const json = await response.json();
-      const data = JSON.stringify(json)   
-      const array = data.split(',');
-       for(var k = 0; k<array.length; k++){
-           if (!array[k].includes('[') && !array[k].includes(']')){
-               intArray.push(parseInt(array[k]))
-       }
+      const resp =  await fetch("https://yay-api.herokuapp.com/unique", { 
+        method: 'POST', 
+        headers: { 
+          'Content-type': 'application/json'
+         }, 
+        body: JSON.stringify({
+         giftCode: random // possible random Number 
+        })  
+        }); 
+     if (!resp){ ////response false - there does not exist a number in the db already, set 
+       console.log("the repsonse is: " + resp);
+       setRandomNumber(random);
      }
-     setData(intArray)
-     }
+    else {
+      fetchData()  // recusively run until response is false and setRandomNumber has run.
+    }
+  };
     fetchData();
     }, [])
 
@@ -72,26 +76,6 @@ const Input = (props) => {
         open: paymentStatus.open
       }); // This will always use latest value of count
   }, [paymentStatus]);
-
-
-const generateUniqueRandom = async () => {
-    //Generate random number
-     let random = Number((Math.random() * 1000000000).toFixed())
-
-    if(!data.includes(random)) {
-        setRandomNumber(random)
-        console.log('random', random);
-        console.log('randomNumber state value', randomNumber);
-    } else {
-        if(data.length < maxNr) {
-          //Recursively generate number
-         return  generateUniqueRandom();
-        } else {
-          console.log('No more numbers available.')
-          return false;
-        }
-    }
-}
 
 
   const handleChangeInput = (id, e) => {
@@ -222,10 +206,11 @@ const sendEmails = async () => {
                     'Content-type': 'application/json'
                    }, 
                   body: JSON.stringify({
-                    question: questions,
                     email: emails[j].email,
-                    unique_id: randomNumber,
-                    name: name
+                    giftCode: randomNumber,
+                    name: name,
+                    ownerName: ownerName,
+                    recipient: 
                   }) 
                   }); 
                 const resData = await response.json(); 
@@ -333,7 +318,7 @@ setIsLoading(false);
 
 const postOrderMongoDB = async () => {
   try{
-    const resp =  await fetch("https://yay-api.herokuapp.com/order", { 
+    const resp =  await fetch("https://yay-api.herokuapp.com/insertOrder", { 
       method: 'POST', 
       headers: { 
         'Content-type': 'application/json'
