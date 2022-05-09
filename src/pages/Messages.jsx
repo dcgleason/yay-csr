@@ -14,12 +14,13 @@ const Messages = () => {
 
   const postMessagesMongoDB = async () => {
     try{
-      const resp =  await fetch("https://yay-api.herokuapp.com/messages", { 
+      const resp =  await fetch("https://yay-api.herokuapp.com/insertMessageBundle", { 
         method: 'POST', 
         headers: { 
           'Content-type': 'application/json'
          }, 
         body: JSON.stringify({
+          createdAt: Date.now(),
           contributorName: contributorName,
           giftCode: giftCode,
           messages:  [responseOne, responseTwo, responseThree, responseFour, responseFive, additionalComments]
