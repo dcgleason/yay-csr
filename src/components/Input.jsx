@@ -60,6 +60,7 @@ const Input = (props) => {
      if (!resp){ ////response false - there does not exist a number in the db already, set 
        console.log("the repsonse is: " + resp);
        setRandomNumber(random);
+       console.log('random number set to:' + random)
      }
     else {
       fetchData()  // recusively run until response is false and setRandomNumber has run.
@@ -230,74 +231,6 @@ const sendEmails = async () => {
           }
         };
   
-
-   const getMessagesbyEmailID  = async () => { 
-
-    try {
-        // get the message ids for a particular unique ID
-        const resp =  await fetch("https://yay-api.herokuapp.com/messages", { 
-          method: 'POST', 
-          headers: { 
-            'Content-type': 'application/json'
-           }, 
-          body: JSON.stringify({
-            unique: randomNumber
-          }) 
-          }); 
-          const resultsData = await resp.json(); 
-          if (resultsData.status === 'success'){
-           alert("Message Sent."); 
-            this.resetForm()
-           }else if(resultsData.status === 'fail'){
-             alert("Message failed to send.")
-           }
-  // loop of post requests, to get body of emails, based on the the specific id (passed from the previous post request)
-     
-        console.log('resultsData typeof' + typeof resultsData);
-         var resultsArray = [];
-         var snippets = [];
-      for(var i = 0; i< resultsData.length; i++){
-      for(let key in resultsData[i]) {
-        console.log(key + ":", resultsData[i][key]);
-        if(key=="id"){
-          resultsArray.push((resultsData[i][key]))
-        };
-      }
-    }
-      console.log('resultsarray' + resultsArray);
-      console.log('before the message api post call');
-      console.log('resultsArray[1] typeof' + typeof resultsArray[1]);
-  
-      for (var m =0; m<resultsArray.length; m++ ){
-          const r =  await fetch("https://yay-api.herokuapp.com/message", { 
-          method: 'POST', 
-          headers: { 
-            'Content-type': 'application/json'
-           }, 
-          body: JSON.stringify({
-            message_id: resultsArray[m]
-          }) 
-          }); 
-          const rData = await r.json(); 
-          console.log('rData typeOf' + rData)
-          if (rData.status === 'success'){
-           consol.log("Message Sent."); 
-            this.resetForm()
-           }else if(rData.status === 'fail'){
-             console.log("Message failed to send.")
-           }
-          if(rData.id){
-          snippets.push(rData.snippet);
-          console.log('snippet: ' + snippets);
-          }
-          }
-          console.log('snippets all: ' + snippets);
-
-        }
-        catch {
-          console.log('error in message getting')
-        }
-}
 
 const handleClick = () => {
   setAlert({
