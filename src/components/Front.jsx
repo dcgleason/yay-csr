@@ -143,7 +143,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-    { name: "Write", href: 'https://palancabooks.netlify.app/write'}
+    { name: "Write", href: 'https://palancabooks.com/write'}
   ],
 }
 const userNavigation = [
