@@ -208,9 +208,8 @@ const sendEmails = async () => {
                   body: JSON.stringify({
                     email: emails[j].email,
                     giftCode: randomNumber,
-                    name: name,
                     ownerName: ownerName,
-                    recipient: 
+                    recipient: name
                   }) 
                   }); 
                 const resData = await response.json(); 
