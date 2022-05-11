@@ -171,23 +171,7 @@ const Messages = () => {
                 <p className="mt-2 text-sm text-gray-500">Response 5</p>
               </div>
             </div>
-            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="about" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Additional words:
-              </label>
-              <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={4}
-                  onChange={e => setAdditionalComments(e.target.value)}
-                  value={additionalComments}
-                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                  defaultValue={''}
-                />
-                <p className="mt-2 text-sm text-gray-500">Resonse 6</p>
-              </div>
-            </div>
+
 
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
           <label for="cover-photo" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> A photo memory </label>
@@ -209,6 +193,26 @@ const Messages = () => {
             </div>
           </div>
         </div>
+
+
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="about" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Additional words:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={4}
+                  onChange={e => setAdditionalComments(e.target.value)}
+                  value={additionalComments}
+                  className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                  defaultValue={''}
+                />
+                <p className="mt-2 text-sm text-gray-500"></p>
+              </div>
+            </div>
+
 
     
           </div>
