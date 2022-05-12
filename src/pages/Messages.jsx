@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ImageUploading from 'react-images-uploading';
+
 
 
 const Messages = () => {
@@ -16,7 +16,12 @@ const Messages = () => {
 
   function handleUpload(event) {
     setFile(event.target.files[0]);
-    console.log("file: " +file.name);
+    let reader = new FileReader(file)
+    console.log("file: " + file.name);
+
+    reader.onload = (e) => {
+      console.log('e.file.result :' + e.target.result)
+    }
 
     // Add code here to upload file to server
     // ...
@@ -55,6 +60,9 @@ const Messages = () => {
     <>
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
         onSubmit={postMessagesMongoDB}
+        action="/pictureUpload"
+        method="post" 
+        enctype="multipart/form-data"
         >
       <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
