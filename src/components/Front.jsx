@@ -434,7 +434,7 @@ const options = {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Palanca Books</span>
+                  <span className="sr-only">Amore Books</span>
                   <img
                     className="h-8 w-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
@@ -657,7 +657,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Palanca Books collects written, positive messages <em>about </em>and <em>for </em>a special person in your life from his or her friends and familiy, publishes those messages in a book, and then sends that book to you so that you can give it to that person. All in 3 weeks.</p>
+                  <p className="text-base text-gray-500">Amore Books collects written, positive messages <em>about </em>and <em>for </em>a special person in your life from his or her friends and familiy, publishes those messages in a book, and then sends that book to you so that you can give it to that person. All in 3 weeks.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
