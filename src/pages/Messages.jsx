@@ -12,32 +12,51 @@ const Messages = () => {
   const [ additionalComments, setAdditionalComments ] = useState('');
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
-  const [ file, setFile ] = useState('');
+  const [ picture, setPicture] = useState({});
 
-  function handleUpload(event) {
-    setFile(event.target.files[0]);
-    let reader = new FileReader(file)
-    console.log("file: " + file.name);
+  const uploadPicture = (e) => {
+    setPicture({
+      /* contains the preview, if you want to show the picture to the user
+           you can access it with this.state.currentPicture
+       */
+      picturePreview: URL.createObjectURL(e.target.files[0]),
+      /* this contains the file we want to send */
+      pictureAsFile: e.target.files[0],
+    });
+  };
+  };
 
-    reader.onload = (e) => {
-      console.log('e.file.result :' + e.target.result)
-    }
-
-    // Add code here to upload file to server
-    // ...
-  }
 
   const postMessagesMongoDB = async () => {
 
-    const formData = new FormData();
-    formData.append(
-      contributorName,
-      file,
-      file.name
-    );
-
 
     try{
+
+
+      // image upload
+
+      const formData = new FormData();
+      formData.append("file", picture.pictureAsFile);
+  
+      console.log(picture.pictureAsFile);
+  
+      for (var key of formData.entries()) {
+        console.log(key[0] + ", " + key[1]);
+      }
+  
+      const data = await fetch("https://yay-api.herokuapp.com/imageUpload", {
+        method: "post",
+        headers: { "Content-Type": "multipart/form-data" },
+        body: formData,
+      });
+      const uploadedImage = await data.json();
+      if (uploadedImage) {
+        console.log("Successfully uploaded image");
+      } else {
+        console.log("Error Found");
+      }
+
+      // message upload
       const resp =  await fetch("https://yay-api.herokuapp.com/insertMessageBundle", { 
         method: 'POST', 
         headers: { 
@@ -205,7 +224,7 @@ const Messages = () => {
                 <div className="flex text-sm text-gray-600">
                   <label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                     <span>Upload a image</span>
-                    <input id="file-upload" name="file-upload" type="file" onChange={handleUpload} className="sr-only"/>
+                    <input id="file-upload" name="file-upload" type="file" className="sr-only"/>
                   </label>
                   <p className="pl-1">here</p>
                 </div>

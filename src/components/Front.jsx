@@ -143,7 +143,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-    { name: "Write", href: 'https://palancabooks.com/write'}
+    { name: "Write", href: 'https://amorebooks.io/write'}
   ],
 }
 const userNavigation = [
