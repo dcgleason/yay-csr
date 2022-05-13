@@ -183,13 +183,13 @@ const policies = [
   {
     name: 'Fast turn-around',
     description:
-      "Within three weeks after ordering, you'll have your Y&Y Gift Book at your door-step, ready to gift.",
+      "Within three weeks after ordering, you'll have your Amore Gift Book at your door-step, ready to gift.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
   },
   {
     name: 'Vouchers',
     description:
-      "Not a great time for you to gift a Y&Y Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
+      "Not a great time for you to gift a Amore Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
 ]
@@ -786,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. From our "Write" page, a contributor can input their messages for a gift recipient by answering the prompts on the page and entering their gift code, sent to them via email. Contributors have two weeks to write and submit their messages. 
+                 1. From our "Write" page, a contributor can input his or her messages for a gift recipient by answering the prompts on the page and entering the gift code (given to them via email) associated with the gift. Contributors have two weeks to write and submit their messages. 
                 </p>
               </div>
               <div>
