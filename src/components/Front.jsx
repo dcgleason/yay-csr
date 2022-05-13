@@ -437,7 +437,7 @@ const options = {
                   <span className="sr-only">Palanca Books</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Palancabooks.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
                     alt=""
                   />
                 </a>
@@ -951,7 +951,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Palancabooks.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
                   alt=""
                   className="h-8 w-auto"
                 />
