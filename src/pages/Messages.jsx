@@ -23,8 +23,7 @@ const Messages = () => {
       /* this contains the file we want to send */
       pictureAsFile: e.target.files[0],
     });
-  };
-  };
+  };;
 
 
   const postMessagesMongoDB = async () => {
