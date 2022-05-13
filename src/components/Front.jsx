@@ -151,7 +151,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: 'Palanca Books. Share the love.',
+  name: 'Amore Books. Share the love.',
   href: '#',
   price: '$50 / book',
   description:
