@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Success from './Success';
+import Failure from './Failure';
 
 
 
@@ -13,6 +15,8 @@ const Messages = () => {
   const [ contributorName, setContributorName ] = useState('');
   const [ giftCode, setGiftCode ] = useState('');
   const [ picture, setPicture] = useState({});
+  const [ success, setSuccess ] = useState(false);
+  const [ failure, setFailure ] = useState(false);
 
   const uploadPicture = (e) => {
     setPicture({
@@ -68,14 +72,19 @@ const Messages = () => {
           messages:  [responseOne, responseTwo, responseThree, responseFour, responseFive, additionalComments]
         }) 
         }); 
+
+       setSuccess(true);
     }
     catch{
       console.error(error)
+      setFailure(true);
     }
   }
 
   return (
     <>
+    {success? <Success/> : <div></div>}
+    {failure? <Failure/> : <div></div>}
       <form className="space-y-8 divide-y divide-gray-200 lg:px-32 lg:mx-32 shadow-md rounded border-gray-200 border"
         onSubmit={postMessagesMongoDB}
         action="/pictureUpload"
