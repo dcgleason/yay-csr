@@ -543,12 +543,13 @@ const postOrderMongoDB = async () => {
             ))}
            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="about" className="block text-sm font-bold text-gray-700 sm:mt-px sm:pt-2">
-                Message to contributors:
+                Your message to contributors:
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <textarea
                   id="about"
                   name="about"
+                  placeholder='Personalize the invitation email that will be sent to your contributors!'
                   rows={4}
                   onChange={e => setGiftOwnerMessage(e.target.value)}
                   value={giftOwnerMessage}
