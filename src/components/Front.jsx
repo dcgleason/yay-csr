@@ -153,7 +153,7 @@ const userNavigation = [
 const product = {
   name: 'Amore Books. Share the love.',
   href: '#',
-  price: 'Pay what you can!',
+  price: 'You set the price.',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png',

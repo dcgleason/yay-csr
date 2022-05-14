@@ -526,16 +526,15 @@ const postOrderMongoDB = async () => {
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
              </div>
              <label
-              className="block text-gray-700 text-sm py-2 font-bold mb-2"
-              htmlFor="Email"
+              className="block text-gray-700 text-sm pt-2 font-bold mb-2"
             >
-              Pay what you can:
+              Name a fair price:
             </label>
             <input
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
-              placeholder="Price"
+              placeholder="$ Amount"
               onChange={e => setPrice(e.target.value)}
               value={name}
               required
