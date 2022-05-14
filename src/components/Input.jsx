@@ -332,7 +332,7 @@ const postOrderMongoDB = async () => {
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
-              placeholder="Full name of gift intiator"
+              placeholder="Full name"
               onChange={e => setOwnerName(e.target.value)}
               value={ownerName}
               required
@@ -347,16 +347,18 @@ const postOrderMongoDB = async () => {
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
-              placeholder="Email address of gift initiator"
+              placeholder="Email address"
               onChange={e => setOwnerEmail(e.target.value)}
               value={ownerEmail}
               required
             />
             {/* Shipping information top */}  
+            
             {  ownerEmail.length >= 1 ?
            (
            <>
-           <h2 className="text-lg pt-5 font-medium text-center text-gray-900">Shipping Information</h2>
+           <div className='sm:border-t sm:border-gray-200 mt-7 '>
+           <h2 className="text-xl pt-5 font-medium text-center underline text-gray-800">Shipping Information</h2>
             <div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
   
               <div className="sm:col-span-2">
@@ -495,30 +497,34 @@ const postOrderMongoDB = async () => {
               className="block text-gray-700 text-sm py-2 font-bold"
               htmlFor="Email"
             >
+              
              Billing Information
             </label>
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+             </div>
             </>
            )
           : <div></div> 
           }
           
+          
             {/* Shipping information bottom */}  
-        
+    
+          <div className='sm:border-t sm:border-gray-200 sm:pt-5 mt-7'>
             <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
-            Gift Information
+            Book Information
           </h2>
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              Gift recipient's first and last name:
+              Book recipient's first and last name:
             </label>
             <input
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
-              placeholder="Full name of gift recipient "
+              placeholder="Full name of book recipient "
               onChange={e => setName(e.target.value)}
               value={name}
               required
@@ -527,7 +533,7 @@ const postOrderMongoDB = async () => {
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              Gift contributors' email addresses:
+              Book contributors' email addresses:
             </label>
             {emails.map(obj => (
             <input
@@ -541,7 +547,7 @@ const postOrderMongoDB = async () => {
               required
             />
             ))}
-           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
               <label htmlFor="about" className="block text-sm font-bold text-gray-700 sm:mt-px sm:pt-2">
                 Your message to contributors:
               </label>
@@ -549,13 +555,13 @@ const postOrderMongoDB = async () => {
                 <textarea
                   id="about"
                   name="about"
-                  placeholder='Personalize the invitation email that will be sent to your contributors!'
                   rows={4}
                   onChange={e => setGiftOwnerMessage(e.target.value)}
                   value={giftOwnerMessage}
                   className="max-w-lg shadow block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                 />
               </div>
+            </div>
             </div>
             
      
