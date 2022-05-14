@@ -30,9 +30,8 @@ const Messages = () => {
   };;
 
 
-  const postMessagesMongoDB = async () => {
-
-
+  const postMessagesMongoDB = async (e) => {
+    e.preventDefault();
     try{
 
 
