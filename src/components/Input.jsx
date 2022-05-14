@@ -188,8 +188,6 @@ const updatePaymentIntent = async () => {
   else {
     return false
   }
-
-  
 }
 
 const databasePost = async () => {
@@ -226,8 +224,6 @@ const databasePost = async () => {
 const sendEmails = async () => {
       const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
       try {
-
-
             for(var j=0; j<emails.length; j++){
               if(emails[j]){
                 (async function(j){
@@ -255,7 +251,6 @@ const sendEmails = async () => {
                 })(j);
               }
             }
-  
           }
           catch {
             console.log('error in sending email(s)');
