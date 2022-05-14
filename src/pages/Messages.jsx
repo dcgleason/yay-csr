@@ -37,6 +37,8 @@ const Messages = () => {
 
       // image upload
 
+      if(picture){
+
       const formData = new FormData();
       formData.append("file", picture.pictureAsFile);
   
@@ -57,7 +59,7 @@ const Messages = () => {
       } else {
         console.log("Error Found");
       }
-
+    }
       // message upload
       const resp =  await fetch("https://yay-api.herokuapp.com/insertMessageBundle", { 
         method: 'POST', 
