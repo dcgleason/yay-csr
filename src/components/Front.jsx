@@ -156,8 +156,8 @@ const product = {
   price: '$50 / book',
   description:
    '',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg',
-  imageAlt: 'Light green canvas bag with black straps, handle, front zipper pouch, and drawstring top.',
+  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png',
+  imageAlt: 'Amore Books logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
     { id: 2, name: 'Bags', href: '#' },
@@ -620,6 +620,11 @@ const options = {
                   ))}
                 </ol>
               </nav> */}
+                <img
+                  src={product.imageSrc}
+                  alt={product.imageAlt}
+                  className="w-full h-full object-center object-cover mb-10"
+                /> 
 
               <div className="mt-4">
                 <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
@@ -675,12 +680,7 @@ const options = {
               <Elements  stripe={stripePromise} options={options}>
                 <Input clientSecret={secret}/>
              </Elements>   
-               
-                {/* <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className="w-full h-full object-center object-cover"
-                /> */}
+            
               </div>
             </div>
 
