@@ -153,7 +153,7 @@ const userNavigation = [
 const product = {
   name: 'Amore Books. Share the love.',
   href: '#',
-  price: '$50 / book',
+  price: 'Pay what you can!',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png',
@@ -251,7 +251,6 @@ export default function Front() {
 
   const [open, setOpen] = useState(false)
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
-
   const [secret, setSecret] = useState(null);
   const stripePromise = loadStripe('pk_test_51KtCf1LVDYVdzLHCzEQuGuw08kKelgXO7AgN6VDN874gIPxfr7dl7PvcNgUZUSnypEOxqJcMCu4G119l0MQixCkj00Rr1fOuls');
 
@@ -678,7 +677,7 @@ const options = {
             <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
               <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
               <Elements  stripe={stripePromise} options={options}>
-                <Input clientSecret={secret}/>
+                <Input clientSecret={secret} setPrice={setPrice} setOwnerEmail={setOwnerEmail}/>
              </Elements>   
             
               </div>

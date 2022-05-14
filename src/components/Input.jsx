@@ -11,6 +11,7 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
+import { privateca } from 'googleapis/build/src/apis/privateca';
 
 
 
@@ -18,7 +19,6 @@ const Input = (props) => {
   const [emails, setEmail] = useState([ { id: uuidv4(),  email: '' }]);
   const [randomNumber, setRandomNumber] = useState(-1)
   const [name, setName] = useState(['']);
-  const [ownerEmail, setOwnerEmail] = useState('');
   const [ownerName, setOwnerName] = useState('');
   const [address, setAddress] = useState('');
   const [apartment, setApartment] = useState('');
@@ -41,6 +41,8 @@ const Input = (props) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [giftOwnerMessage, setGiftOwnerMessage] = useState('');
+  const [price, setPrice] = useStripe();
+  const [ownerEmail, setOwnerEmail] = useState('');
   const stripe = useStripe();
   const elements = useElements();
  
@@ -114,11 +116,14 @@ const submitPayment = async () => {
   // create customer and submit payment
 
   setIsLoading(true);
+  const result = updatePaymentIntent()
   console.log('ownerName: '+ ownerName);
   console.log('ownerEmail: '+ ownerEmail);
   console.log('clientSecret: '+ props.clientSecret);
 
   //(async () => {
+
+    if (result){
     const {paymentIntent, error} = await stripe.confirmCardPayment(
       props.clientSecret,
       {
@@ -156,12 +161,36 @@ const submitPayment = async () => {
       
      
     }
+  }
 //  })();
 
 
 
 }
 
+const updatePaymentIntent = () => {
+
+  const resp =  await fetch("https://yay-api.herokuapp.com/updatePaymentIntent", { 
+    method: 'POST', 
+    headers: { 
+      'Content-type': 'application/json'
+     }, 
+    body: JSON.stringify({
+     receipt_email: ownerEmail,
+     price: price
+    })  
+    });
+  const respData = await resp.json(); 
+  console.log('after payment intent update with price amount: '+respData);
+  if(respData){ // work on this to properply handle the error / return message paymentIntent.status would be what?
+    return true
+  }
+  else {
+    return false
+  }
+
+  
+}
 
 const databasePost = async () => {
   const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
@@ -502,6 +531,21 @@ const postOrderMongoDB = async () => {
             </label>
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
              </div>
+             <label
+              className="block text-gray-700 text-sm py-2 font-bold mb-2"
+              htmlFor="Email"
+            >
+              Pay what you can:
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              name="name"
+              placeholder="Price"
+              onChange={e => setPrice(e.target.value)}
+              value={name}
+              required
+            />
             </>
            )
           : <div></div> 
