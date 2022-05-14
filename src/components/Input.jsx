@@ -11,7 +11,6 @@ import {
   useStripe,
   useElements
 } from '@stripe/react-stripe-js';
-import { privateca } from 'googleapis/build/src/apis/privateca';
 
 
 
@@ -41,7 +40,7 @@ const Input = (props) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [giftOwnerMessage, setGiftOwnerMessage] = useState('');
-  const [price, setPrice] = useStripe();
+  const [price, setPrice] = useState();
   const [ownerEmail, setOwnerEmail] = useState('');
   const stripe = useStripe();
   const elements = useElements();
