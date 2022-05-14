@@ -536,7 +536,7 @@ const postOrderMongoDB = async () => {
               name="name"
               placeholder="$ Amount"
               onChange={e => setPrice(e.target.value)}
-              value={name}
+              value={price}
               required
             />
             </>
