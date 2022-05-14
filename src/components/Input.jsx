@@ -556,6 +556,7 @@ const postOrderMongoDB = async () => {
                   id="about"
                   name="about"
                   rows={4}
+                  required
                   onChange={e => setGiftOwnerMessage(e.target.value)}
                   value={giftOwnerMessage}
                   className="max-w-lg shadow block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
