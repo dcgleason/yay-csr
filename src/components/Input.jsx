@@ -40,6 +40,7 @@ const Input = (props) => {
     open: false
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [giftOwnerMessage, setGiftOwnerMessage] = useState('');
   const stripe = useStripe();
   const elements = useElements();
  
@@ -538,6 +539,22 @@ const postOrderMongoDB = async () => {
               required
             />
             ))}
+           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="about" className="block text-sm font-bold text-gray-700 sm:mt-px sm:pt-2">
+                Message to contributors:
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={4}
+                  onChange={e => setGiftOwnerMessage(e.target.value)}
+                  value={giftOwnerMessage}
+                  className="max-w-lg shadow block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            
      
      {isLoading ? 
           <LoadingSpinner /> : 
