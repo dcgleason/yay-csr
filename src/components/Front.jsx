@@ -661,7 +661,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Kudos Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish those messages in a book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
+                  <p className="text-base text-gray-500">Kudos Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish the collection of loving, supportive, encouraging messages for that person in a book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, and / or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a href="https://kudosbooks.co/write">Write</a> page. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a href="https://kudosbooks.co/write">Write</a> page. Contributors have 14 to write and submit their messages. 
                 </p>
               </div>
               <div>
