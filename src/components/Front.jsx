@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the book-creation process, your contributors will be able to input their messages for a gift recipient by answering the prompts on the "Write" page and entering the gift code (given to them via email) associated with your gift. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate the process of creating a book, your book contributors will be able to input their messages for a the recipient by answering the prompts on the "Write" page and entering the gift code (given to them via email) associated with your gift. Contributors have 14 to write and submit their messages. 
                 </p>
               </div>
               <div>
