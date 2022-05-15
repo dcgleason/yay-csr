@@ -143,7 +143,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-    { name: "Write", href: 'https://amorebooks.io/write'}
+    { name: "Write", href: 'https://kudosbooks.co/write'}
   ],
 }
 const userNavigation = [
@@ -151,13 +151,13 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: 'Amore Books. Share the love.',
+  name: 'Kudos Books. Share the love.',
   href: '#',
   price: 'You set the price.',
   description:
    '',
-  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png',
-  imageAlt: 'Amore Books logo',
+  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Kudos_Books_Logo.png',
+  imageAlt: 'Kudos Books logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
     { id: 2, name: 'Bags', href: '#' },
@@ -183,13 +183,13 @@ const policies = [
   {
     name: 'Fast turn-around',
     description:
-      "Within three weeks after ordering, you'll have your Amore Gift Book at your door-step, ready to gift.",
+      "Within three weeks after ordering, you'll have your Kudos Gift Book at your door-step, ready to gift.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
   },
   {
     name: 'Vouchers',
     description:
-      "Not a great time for you to gift a Amore Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
+      "Not a great time for you to gift a Kudos Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
 ]
@@ -433,10 +433,10 @@ const options = {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Amore Books</span>
+                  <span className="sr-only">Kudos Books</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Kudos_Books_Logo.png"
                     alt=""
                   />
                 </a>
@@ -661,7 +661,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Amore Books collects written, positive messages <em>about </em>and <em>for </em>a special person in your life from his or her friends and familiy, publishes those messages in a book, and then sends that book to you so that you can give it to that person. All in 3 weeks.</p>
+                  <p className="text-base text-gray-500">Kudos Books collects written, positive messages <em>about </em>and <em>for </em>a special person in your life from his or her friends and familiy, publishes those messages in a book, and then sends that book to you so that you can give it to that person. All in 3 weeks.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
@@ -950,7 +950,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Kudos_Books_Logo.png"
                   alt=""
                   className="h-8 w-auto"
                 />
