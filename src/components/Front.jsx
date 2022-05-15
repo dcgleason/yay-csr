@@ -143,7 +143,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', href: '#' },
-    { name: "Write", href: 'https://kudosbooks.co/write'}
+    { name: "Write", href: 'https://kudo.love/write'}
   ],
 }
 const userNavigation = [
@@ -151,13 +151,13 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: 'Kudos Books. Share the love.',
+  name: 'Kudo. Share the love.',
   href: '#',
   price: 'You set the price.',
   description:
    '',
-  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Kudos_Books_Logo.png',
-  imageAlt: 'Kudos Books logo',
+  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Kudo_Logo.png',
+  imageAlt: 'Kudo logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
     { id: 2, name: 'Bags', href: '#' },
@@ -183,13 +183,13 @@ const policies = [
   {
     name: 'Fast turn-around',
     description:
-      "Within three weeks after ordering, you'll have your Kudos Gift Book at your door-step, ready to gift.",
+      "Within three weeks after ordering, you'll have your Kudo gift book at your door-step, ready to gift.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
   },
   {
     name: 'Vouchers',
     description:
-      "Not a great time for you to gift a Kudos Gift Book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
+      "Not a great time for you to gift a Kudo gift book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
 ]
@@ -433,10 +433,10 @@ const options = {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Kudos Books</span>
+                  <span className="sr-only">Kudo</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Kudos_Books_Logo.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Kudo_Logo.png"
                     alt=""
                   />
                 </a>
@@ -661,7 +661,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Kudos Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish the collection of loving, supportive, encouraging messages for that person in a book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
+                  <p className="text-base text-gray-500">Kudo collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish the collection of loving, supportive, encouraging messages for that person in a book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://kudosbooks.co/write">Write</a> page. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://kudo.love/write">Write</a> page. Contributors have 14 to write and submit their messages. 
                 </p>
               </div>
               <div>
@@ -950,7 +950,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Kudos_Books_Logo.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Kudo_Logo.png"
                   alt=""
                   className="h-8 w-auto"
                 />
@@ -1015,7 +1015,7 @@ const options = {
           </div>
 
           <div className="border-t border-gray-100 py-10 text-center">
-            <p className="text-sm text-gray-500">&copy; 2022 Palanca Books, Inc. All rights reserved.</p>
+            <p className="text-sm text-gray-500">&copy; 2022 Kudo, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
