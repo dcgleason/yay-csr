@@ -661,7 +661,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Amore Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish the collection of loving, supportive, encouraging messages for that person in a book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
+                  <p className="text-base text-gray-500">Amore Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish the collection of loving, supportive, encouraging messages for that person in a book and send that book to you so that you can give it to that person. All in 2 weeks.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate gift-creation process, your gift contributors (often the family, friends, or coworkers of the gift recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate gift-creation process, your gift contributors (often the family, friends, or coworkers of the gift recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page. Contributors have 7 days to write and submit their messages. 
                 </p>
               </div>
               <div>
@@ -797,7 +797,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. After the two-week deadline, responses are compiled and published into a physical book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient. 
+                  2. After the one-week deadline, responses are compiled and published into a physical book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient. 
                 </p>
               </div>
             </div>
