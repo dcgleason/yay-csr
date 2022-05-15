@@ -339,7 +339,7 @@ const postOrderMongoDB = async () => {
           onSubmit={submitRequest}
         >
           <h1 className="text-2xl pt-6 pb-6 text-center font-medium text-gray-800">
-            Gift a book
+            Initate your gift
           </h1>
           <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
             Your Information
@@ -549,13 +549,13 @@ const postOrderMongoDB = async () => {
     
           <div className='sm:border-t sm:border-gray-200 sm:pt-5 mt-7'>
             <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
-            Book Information
+            Gift Information
           </h2>
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              Book recipient's first and last name:
+              Gift recipient's first and last name:
             </label>
             <input
               className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -570,7 +570,7 @@ const postOrderMongoDB = async () => {
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
               htmlFor="Email"
             >
-              Book contributors' email addresses:
+              Gift contributors' email addresses:
             </label>
             {emails.map(obj => (
             <input
