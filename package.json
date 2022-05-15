@@ -29,6 +29,7 @@
     "react-images-uploading": "^3.1.6",
     "react-request": "^3.2.0",
     "react-router-dom": "^6.3.0",
+    "react-share": "^4.4.0",
     "react-uuid": "^1.0.2",
     "request": "^2.88.2",
     "uuid": "^8.3.2",
