@@ -386,7 +386,7 @@ const postOrderMongoDB = async () => {
   
               <div className="sm:col-span-2">
                 <label htmlFor="address"  className="block text-gray-700 text-sm pb-2 font-bold mb-2">
-                  Address
+                  Street address
                 </label>
                 <div className="mt-1">
                   <input
