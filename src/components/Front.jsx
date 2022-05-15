@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://kudo.love/write">Write</a> page. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate gift-creation process, your gift contributors (often the family, friends, or coworkers of the gift recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://kudo.love/write">Write</a> page. Contributors have 14 to write and submit their messages. 
                 </p>
               </div>
               <div>
@@ -989,7 +989,7 @@ const options = {
               {/* Newsletter section */}
               <div className="mt-12 md:mt-0 md:row-start-2 md:col-start-3 md:col-span-8 lg:row-start-1 lg:col-start-9 lg:col-span-4">
                 <h3 className="text-sm font-medium text-gray-900">Sign up for our newsletter</h3>
-                <p className="mt-6 text-sm text-gray-500">Sign up for our newsletter! Hits your inbox every Monday.</p>
+                <p className="mt-6 text-sm text-gray-500">Arrives in your inbox every Monday.</p>
                 <form className="mt-2 flex sm:max-w-md">
                   <label htmlFor="email-address" className="sr-only">
                     Email address
