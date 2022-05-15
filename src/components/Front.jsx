@@ -845,7 +845,7 @@ const options = {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
               </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Weddings</h3>
-                  <p className="mt-3 text-base text-gray-500">Give a couple a gift they can cherrish forever.</p>
+                  <p className="mt-3 text-base text-gray-500">Give a couple a gift they can cherrish for years to come.</p>
                 </div>
                 <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -873,7 +873,7 @@ const options = {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">In Memory of</h3>
-                  <p className="mt-3 text-base text-gray-500">Collect memories of a loved one who has passed to keep.</p>
+                  <p className="mt-3 text-base text-gray-500">Collect memories of a loved one who has passed to keep forever.</p>
                 </div>
               {/* ))} */}
             </div>
