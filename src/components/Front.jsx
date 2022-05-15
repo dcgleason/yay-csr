@@ -661,7 +661,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Kudos Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish those messages in a physicial book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
+                  <p className="text-base text-gray-500">Kudos Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish those messages in a book and send that book to you so that you can give it to that person. All in 3 weeks.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
