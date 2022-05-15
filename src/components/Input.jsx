@@ -40,7 +40,6 @@ const Input = (props) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [giftOwnerMessage, setGiftOwnerMessage] = useState('');
-  const [price, setPrice] = useState();
   const [ownerEmail, setOwnerEmail] = useState('');
   const stripe = useStripe();
   const elements = useElements();
@@ -525,20 +524,6 @@ const postOrderMongoDB = async () => {
             </label>
              <CardElement  className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
              </div>
-             <label
-              className="block text-gray-700 text-sm pt-2 font-bold mb-2"
-            >
-              Name a fair price:
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              name="name"
-              placeholder="$ Amount"
-              onChange={e => setPrice(e.target.value)}
-              value={price}
-              required
-            />
             </>
            )
           : <div></div> 

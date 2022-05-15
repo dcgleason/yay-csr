@@ -153,7 +153,7 @@ const userNavigation = [
 const product = {
   name: 'Amore Books. Share the love.',
   href: '#',
-  price: 'You set the price.',
+  price: '$50/book ($5 for a limited time)',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png',
@@ -252,6 +252,7 @@ export default function Front() {
   const [open, setOpen] = useState(false)
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
   const [secret, setSecret] = useState(null);
+
   const stripePromise = loadStripe('pk_test_51KtCf1LVDYVdzLHCzEQuGuw08kKelgXO7AgN6VDN874gIPxfr7dl7PvcNgUZUSnypEOxqJcMCu4G119l0MQixCkj00Rr1fOuls');
 
 useEffect(() => {
@@ -661,7 +662,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Amore Books collects written, positive messages <em>about </em>and <em>for </em>a person in your life who you want show your appreciation for. We publish the collection of loving, supportive, encouraging messages for that person in a book and send that book to you so that you can give it to that person. All in 2 weeks.</p>
+                  <p className="text-base text-gray-500">Amore Books makes it easy to show your friend or family member just how supported and appreciated they really are.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
@@ -785,7 +786,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate gift-creation process, your gift contributors (often the family, friends, or coworkers of the gift recipient) will be able to input their messages for a the recipient by answering the prompts on the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page. Contributors have 7 days to write and submit their messages. 
+                 1. After you initiate gift-creation process, the family, friends, or coworkers of the gift recipient, i.e. your contributors, will be prompted to input heartfelt messages from the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about your gift recipient. Contributors have 7 days to write and submit their responses. 
                 </p>
               </div>
               <div>
@@ -797,7 +798,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. After the one-week deadline, responses are compiled and published into a physical book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient. 
+                  2. After the one-week deadline, responses are compiled and published into a book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient. 
                 </p>
               </div>
             </div>
@@ -806,7 +807,7 @@ const options = {
           {/* Policies section */}
           <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
             <h2 id="policy-heading" className="sr-only">
-              Our policies
+              Occations
             </h2>
             <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
               {policies.map((policy) => (
