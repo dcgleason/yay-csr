@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the process of creating a book, your book contributors will be able to input their messages for a the recipient by answering the prompts on the "Write" page and entering the gift code (given to them via email) associated with your gift. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a href="https://kudosbooks.co/write">Write</a> page. Contributors have 14 to write and submit their messages. 
                 </p>
               </div>
               <div>
@@ -797,7 +797,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. After the two-week deadline, responses are compiled and published into a physical book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient.
+                  2. After the two-week deadline, responses are compiled and published into a physical book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient. 
                 </p>
               </div>
             </div>
