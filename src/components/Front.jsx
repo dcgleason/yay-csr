@@ -785,7 +785,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a href="https://kudosbooks.co/write">Write</a> page. Contributors have 14 to write and submit their messages. 
+                 1. After you initiate the process of creating a book, your book contributors (often the family, friends, and / or coworkers of the book recipient) will be able to input their messages for a the recipient by answering the prompts on the <a href="https://kudosbooks.co/write">Write</a> page. Contributors have 14 to write and submit their messages. 
                 </p>
               </div>
               <div>
