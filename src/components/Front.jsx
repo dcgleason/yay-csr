@@ -774,7 +774,7 @@ const options = {
                 How we do it:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                (Hint: we make sure <em>you</em> get all the credit)
+                (Hint: we make sure <em>you</em> get all the credit.)
               </p>
             </div>
 
