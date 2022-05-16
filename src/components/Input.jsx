@@ -593,7 +593,7 @@ const postOrderMongoDB = async () => {
           <div className="flex items-center justify-between">
          
            <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-6 w-full rounded focus:outline-none focus:shadow-outline"
+              className="bg-[#f8ad9d] hover:bg-[#f4978e] text-white font-bold py-2 px-4 mt-6 w-full rounded focus:outline-none focus:shadow-outline"
               type="submit"
               onClick={submitRequest}
             >

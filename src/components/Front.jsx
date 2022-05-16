@@ -417,7 +417,7 @@ const options = {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="bg-red-500 h-12 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
+        <p className=" bg-[#f08080] h-12 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
           DEV
         </p>
 
