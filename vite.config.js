@@ -12,6 +12,13 @@ import react from '@vitejs/plugin-react'
 
 
 module.exports = defineConfig({
-  plugins: [react()]
+  plugins: [react()],
+  theme: {
+    extend: {
+      fontFamily: {
+        'bad-script': ['"Bad Script"', 'cursive']
+      }
+    }
+  }
 
 })

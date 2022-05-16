@@ -4,10 +4,16 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'bad-script': ['"Bad Script"', 'cursive']
+      }
+    },
     container: {
       center: true
     }
   },
   plugins: [],
 }
+
+
