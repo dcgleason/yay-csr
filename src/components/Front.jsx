@@ -155,7 +155,7 @@ const userNavigation = [
 const product = {
   name: 'Amore Books. Share the love.',
   href: '#',
-  price: '$50/book ($5 for a limited time)',
+  price: '$50/book',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png',
