@@ -3,7 +3,7 @@ import React from "react";
 const LoadingSpinner = () => {
 
     return (
-     <button type="button" className="bg-blue-500 hover:bg-blue-600 text-white font-bold pt-2 pb-2 px-4 mt-4 w-full rounded focus:outline-none focus:shadow-outline" disabled>
+     <button type="button" className="bg-[#f8ad9d] hover:bg-[#f4978e] text-white font-bold pt-2 pb-2 px-4 mt-4 w-full rounded focus:outline-none focus:shadow-outline" disabled>
             <svg className="animate-spin h-5 w-5 mr-3 inline border-4 rounded-full" viewBox="0 0 24 24" xmlns='https://www.w3.org/TR/SVG2/' fill='none'>
                 <circle
                 className="opacity-25"
