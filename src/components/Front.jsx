@@ -810,10 +810,10 @@ const options = {
           <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
           <div className="flex flex-col items-center pb-10 text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-               When to send?
+               When to is a good time to send an Amore Book?
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-               (Below are some of our favorite occasions...fit for an Amore Book)
+               (Below are some of our favorite excuses to "share the love.")
               </p>
             </div>
             <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
