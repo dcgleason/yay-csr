@@ -158,7 +158,7 @@ const product = {
   price: '$50/book ($5 for a limited time)',
   description:
    '',
-  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png',
+  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png',
   imageAlt: 'Amore Books logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
@@ -417,7 +417,7 @@ const options = {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
+        <p className="bg-red-400 h-12 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
           DEV
         </p>
 
@@ -439,7 +439,7 @@ const options = {
                   <span className="sr-only">Amore Books</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png"
                     alt=""
                   />
                 </a>
@@ -595,7 +595,7 @@ const options = {
       <main>
         {/* Product */}
         <div className="bg-white">
-          <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:pt-24 sm:pb-32 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+          <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:pt-0 sm:pb-0 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             {/* Product details */}
             <div className="lg:max-w-lg lg:self-end">
               {/* <nav aria-label="Breadcrumb">
@@ -625,7 +625,7 @@ const options = {
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="w-full h-full object-center object-cover mb-10"
+                  className="w-full h-full object-center object-cover mb-10 mx-25"
                 /> 
 
               <div className="mt-4">
@@ -634,7 +634,7 @@ const options = {
 
               <section aria-labelledby="information-heading" className="mt-4">
                 <h2 id="information-heading" className="sr-only">
-                  Product information
+                  TEST
                 </h2>
 
                 <div className="flex items-center">
@@ -664,7 +664,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">Amore Books makes it easy to show your friend or family member just how supported and appreciated they really are.</p>
+                  <p className="text-base text-gray-500"><b>Amore Book</b>: a book of written messages of love and support about a special person in your life from <em>their</em> family and friends. <br></br><br></br> We make it easy for you to give the most meaningful gift on any important occasion.</p>
                 </div>
 
                 {/* <div className="mt-6 flex items-center">
@@ -771,10 +771,10 @@ const options = {
           <section aria-labelledby="details-heading">
             <div className="flex flex-col items-center text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                How creating an Amore Book works:
+                How it works:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                (it's a two-step process)
+                (Creating an <em>Amore Book</em> is a a two-step process)
               </p>
             </div>
 
@@ -810,10 +810,10 @@ const options = {
           <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
           <div className="flex flex-col items-center pb-10 text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                When to send:
+               When to send?
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                (Below are are some our favorite occations... fit for an Amore Book)
+               (Below are some of our favorite occasions...fit for an Amore Book)
               </p>
             </div>
             <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
@@ -1012,7 +1012,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Y_%282%29.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png"
                   alt=""
                   className="h-8 w-auto"
                 />
