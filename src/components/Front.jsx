@@ -788,7 +788,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate gift-creation process, the family, friends, or coworkers of the gift recipient, i.e. your contributors, will be prompted to input heartfelt messages from the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about your gift recipient. Contributors have 7 days to write and submit their responses. 
+                 1. After you initiate the gift-creation process, the family, friends, and/or coworkers of the gift recipient, i.e. your contributors, will be prompted to input heartfelt messages from the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about your gift recipient. Contributors have 7 days to write and submit their responses. 
                 </p>
               </div>
               <div>
