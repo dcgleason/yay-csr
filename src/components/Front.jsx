@@ -23,7 +23,7 @@ import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import { Input } from "../components/index"
 import { useEffect } from 'react'
-
+import clsx from "clsx"
 
 
 const navigation = {
@@ -155,7 +155,7 @@ const userNavigation = [
 const product = {
   name: 'Share a book of love.',
   href: '#',
-  price: '$50/book',
+  price: 'Post-launch: $45/book',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png',
@@ -254,6 +254,8 @@ export default function Front() {
   const [open, setOpen] = useState(false)
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
   const [secret, setSecret] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const[betaEmail, setBetaEmail] = useState('');
 
   const stripePromise = loadStripe('pk_test_51KtCf1LVDYVdzLHCzEQuGuw08kKelgXO7AgN6VDN874gIPxfr7dl7PvcNgUZUSnypEOxqJcMCu4G119l0MQixCkj00Rr1fOuls');
 
@@ -370,6 +372,7 @@ const options = {
                               </li>
                             ))}
                           </ul>
+                          
                         </div>
                       ))}
                     </Tab.Panel>
@@ -400,7 +403,11 @@ const options = {
                 </div>
               </div> */}
 
+                  
+          
+                
               <div className="border-t border-gray-200 py-6 px-4">
+              
                 <a href="#" className="-m-2 p-2 flex items-center">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1600px-Flag_of_the_United_States.svg.png?20151118161041"
@@ -411,6 +418,7 @@ const options = {
                   <span className="sr-only">, change currency</span>
                 </a>
               </div>
+
             </div>
           </Transition.Child>
         </Dialog>
@@ -544,6 +552,59 @@ const options = {
                 </div>
               </Popover.Group>
 
+              <Transition
+                show={isModalOpen}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-15 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+                >
+    <Dialog
+		  onClose={() => setIsModalOpen(false)}
+			as="div"
+      className=
+				"fixed inset-0 opacity-100 flex items-center justify-center overflow-y-auto bg-gray-100">
+			
+			<div className="flex flex-col bg-gray-300 text-white w-96 py-8 px-4 text-center">
+				<Dialog.Overlay />
+			      	<Dialog.Title className="text-[#f08080] text-3xl">
+				      	Try the beta version of <em>Amore Books</em> 
+                </Dialog.Title>
+                <Dialog.Description className="text-xl m-2">
+                  (it is free!)
+                </Dialog.Description>
+                <form className="mt-2 flex sm:max-w-md" >
+                  <label htmlFor="email-address" className="sr-only">
+                    Email address
+                  </label>
+                  <input
+                    id="email-address"
+                    type="text"
+                    placeholder="Email address"
+                    autoComplete="email"
+                    value={betaEmail}
+                    onChange={(e)=>setBetaEmail(e.target.value)}
+                    className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
+                  />
+                  <div className="ml-4 flex-shrink-0">
+                    <button
+                      type="button"
+                      className="w-full bg-[#f8ad9d] hover:bg-[#f4978e] border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f08080]"
+                      onClick={() => setIsModalOpen(false)} //need to submit email onSubmit without slowing down performance
+                    >
+                     Sign-up
+                    </button>
+                  </div>
+                </form>
+                
+              </div>
+		</Dialog>
+    </Transition>
+
+        {/* Join beta pop up */}
+        
               <div className="ml-auto flex items-center">
                 {/* <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
@@ -554,6 +615,13 @@ const options = {
                     Create account
                   </a>
                 </div> */}
+                 <button
+                      type="button"
+                      className="w-full bg-[#f8ad9d] hover:bg-[#f4978e] border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f08080]"
+                      onClick={() => setIsModalOpen(true)}
+                   >
+                      Try Beta (free)
+                    </button>
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="text-gray-700 hover:text-gray-800 flex items-center">
