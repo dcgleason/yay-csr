@@ -664,7 +664,7 @@ const options = {
       <main>
         {/* Product */}
         <div className="bg-white">
-          <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             {/* Product details */}
             <div className="lg:max-w-lg mb-40 pb-40 lg:self-end">
               {/* <nav aria-label="Breadcrumb">
