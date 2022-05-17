@@ -733,7 +733,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support about a special person in your life from <em>his or her</em> family and friends. <br></br><br></br></p>
+                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support <em>about</em> and <em>for</em> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br></p>
                 </div>
                 <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
@@ -844,7 +844,7 @@ const options = {
                 How to create an Amore Book?
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                (We make sure <em>you</em> get all the credit)
+                (Hint: we make sure <em>you</em> get all the credit)
               </p>
             </div>
 
@@ -858,7 +858,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the gifting process, the family, friends, and/or coworkers of the gift recipient, i.e. your contributors, will be prompted to input heartfelt messages from the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about your gift recipient (we send them an email with a link to the the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page). Contributors have 7 days to write and submit their responses. 
+                 1. After you initiate the gifting process, the family, friends, and/or coworkers of the gift recipient, i.e. your contributors, will be prompted to input heartfelt messages from the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about and for your gift recipient (we send them an email with a link to the the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page). Contributors have 7 days to write and submit their responses. 
                 </p>
               </div>
               <div>
