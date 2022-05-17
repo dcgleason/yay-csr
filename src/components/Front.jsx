@@ -917,7 +917,7 @@ const options = {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
               </svg>
                   <h3 className="mt-6 text-base font-medium text-gray-900">Weddings</h3>
-                  <p className="mt-3 text-base text-gray-500">Give a the bride (or groom) a gift they can cherrish for years to come.</p>
+                  <p className="mt-3 text-base text-gray-500">Give a the bride (or groom) a gift they can cherish for years to come.</p>
                 </div>
                 <div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
