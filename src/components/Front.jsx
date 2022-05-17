@@ -733,7 +733,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support <u>about</u> and <u>for</u> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> Connect over shared love for a friend or family member and get the pleasure of making your loved one's week, month, or year. </p>
+                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support <u>about</u> and <u>for</u> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> Connect over <em>shared love</em> for a friend or family member and get the pleasure of making your loved one's week, month, or year. </p>
                 </div>
                 <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
@@ -841,7 +841,7 @@ const options = {
           <section aria-labelledby="details-heading">
             <div className="flex flex-col items-center text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                How is your Amore Book create?
+                How is your Amore Book put together?
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
                 (Hint: we make sure <em>you</em> get all the credit)
