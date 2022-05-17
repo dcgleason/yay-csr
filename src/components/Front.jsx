@@ -155,7 +155,7 @@ const userNavigation = [
 const product = {
   name: 'Share a book of love.',
   href: '#',
-  price: 'Post-launch: $45/book',
+  price: '$45/book',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png',
@@ -584,6 +584,7 @@ const options = {
                     type="text"
                     placeholder="Email address"
                     autoComplete="email"
+                    required
                     value={betaEmail}
                     onChange={(e)=>setBetaEmail(e.target.value)}
                     className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
