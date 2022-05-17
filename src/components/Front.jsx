@@ -780,7 +780,7 @@ const options = {
 
             <div className="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
               <div>
-                <div className="w-full aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                <div className="w-9/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <img
                     src="https://cdn1.iconfinder.com/data/icons/aami-flat-emails/64/email-41-512.png"
                     alt="Drawstring top with elastic loop closure and textured interior padding."
@@ -792,7 +792,7 @@ const options = {
                 </p>
               </div>
               <div>
-                <div className="w-full aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+                <div className="w-9/12 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1024px-Closed_Book_Icon.svg.png"
                     alt="Front zipper pouch with included key ring."
