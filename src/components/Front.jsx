@@ -858,7 +858,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. After you initiate the gifting process, the family, friends, and/or coworkers of the gift recipient, i.e. your contributors, will be prompted to input heartfelt messages from the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about and for your gift recipient (we send them an email with a link to the the <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page). Contributors have 7 days to write and submit their responses. 
+                 1. Family, friends, and/or coworkers of the gift recipient (i.e. your contributors) write heartfelt messages from our <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about and for your gift recipient using your unique gift code. Contributors have 7 days to write and submit their responses. 
                 </p>
               </div>
               <div>
@@ -870,7 +870,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. After the one-week deadline, responses are compiled and published into a book within days. The completed book is sent to you, the gift initiator, for you to give to the intended recipient. 
+                  2. After one week, responses are compiled and published into a book 2-3 days time. The completed "book of love" is sent to you, the gift initiator, for you to give to the intended recipient. 
                 </p>
               </div>
             </div>
