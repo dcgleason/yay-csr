@@ -153,7 +153,7 @@ const userNavigation = [
 //   { name: 'Create account', href: '#' },
 ]
 const product = {
-  name: 'Share the love.',
+  name: 'Create a book of love.',
   href: '#',
   price: '$45/book',
   description:
