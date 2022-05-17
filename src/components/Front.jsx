@@ -621,7 +621,7 @@ const options = {
                       className="w-full bg-[#f8ad9d] hover:bg-[#f4978e] border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f08080]"
                       onClick={() => setIsModalOpen(true)}
                    >
-                      Try Beta (free)
+                      Try Beta Version (it's free)
                     </button>
 
                 <div className="hidden lg:ml-8 lg:flex">
