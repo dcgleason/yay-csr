@@ -534,7 +534,7 @@ const postOrderMongoDB = async () => {
     
           <div className='sm:border-t sm:border-gray-200 sm:pt-5 mt-7'>
             <h2 className="text-xl pt-3 pb-3 text-center underline font-medium text-gray-800">
-            Gift Information
+            Book Information
           </h2>
           <label
               className="block text-gray-700 text-sm py-2 font-bold mb-2"
