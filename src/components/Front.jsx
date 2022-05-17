@@ -858,7 +858,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. Family, friends, and/or coworkers of the gift recipient (i.e. your contributors) write heartfelt messages from prompts on our <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about and for your gift recipient using your unique gift code. Contributors have 7 days to submit their responses. 
+                 1. Family, friends, and/or coworkers of the gift recipient (i.e. your contributors) write heartfelt messages from prompts on our <a className="underline font-bold" href="https://amorebooks.io/write">Write</a> page about your gift recipient using your unique gift code. Contributors have 7 days to submit their responses. 
                 </p>
               </div>
               <div>
