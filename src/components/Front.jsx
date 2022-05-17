@@ -573,7 +573,7 @@ const options = {
 				      	Try the beta version of <em>Amore Books</em> 
                 </Dialog.Title>
                 <Dialog.Description className="text-xl m-2">
-                  (it is free!)
+                  (it is free! We'll send you an email with instructions.)
                 </Dialog.Description>
                 <form className="mt-2 flex sm:max-w-md" >
                   <label htmlFor="email-address" className="sr-only">
