@@ -733,7 +733,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support about and for a special person in your life from <em>his or her</em> family and friends. <br></br><br></br></p>
+                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support <u>about</u> and <u>for</u> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br></p>
                 </div>
                 <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
