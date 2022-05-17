@@ -417,9 +417,9 @@ const options = {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className=" bg-[#ffdab9] h-12 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
+        {/* <p className=" bg-[#ffdab9] h-12 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
           DEV
-        </p>
+        </p> */}
 
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
@@ -438,7 +438,7 @@ const options = {
                 <a href="#">
                   <span className="sr-only">Amore Books</span>
                   <img
-                    className="h-8 w-auto"
+                    className="h-6 w-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png"
                     alt=""
                   />
@@ -595,9 +595,9 @@ const options = {
       <main>
         {/* Product */}
         <div className="bg-white">
-          <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:pt-0 sm:pb-0 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+          <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             {/* Product details */}
-            <div className="lg:max-w-lg lg:self-end">
+            <div className="lg:max-w-lg mb-40 pb-40 lg:self-end">
               {/* <nav aria-label="Breadcrumb">
                 <ol role="list" className="flex items-center space-x-2">
                   {product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
@@ -625,7 +625,7 @@ const options = {
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="w-full h-full object-center object-cover mb-10 mx-25"
+                  className="w-9/12 h-9/12 object-center object-cover mb-10 mx-25"
                 /> 
 
               <div className="mt-4">
@@ -666,6 +666,15 @@ const options = {
                 <div className="mt-4 space-y-6">
                   <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support about a special person in your life from <em>his or her</em> family and friends. <br></br><br></br></p>
                 </div>
+                <div className="mt-6 text-center">
+                    <a href="#" className="group inline-flex text-base font-medium">
+                      <ShieldCheckIcon
+                        className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="text-gray-500 hover:text-gray-700">Money-back Guarantee </span>
+                    </a>
+                  </div>
 
                 {/* <div className="mt-6 flex items-center">
                   <CheckIcon className="flex-shrink-0 w-5 h-5 text-green-500" aria-hidden="true" />
@@ -677,7 +686,7 @@ const options = {
             {/* Product image */}
 
 
-            <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
+            <div className="mt-10 pb-9 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
               <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
               <Elements  stripe={stripePromise} options={options}>
                 <Input clientSecret={secret}/>
@@ -751,15 +760,7 @@ const options = {
                       Add to bag
                     </button>
                   </div> */}
-                  <div className="mt-6 text-center">
-                    <a href="#" className="group inline-flex text-base font-medium">
-                      <ShieldCheckIcon
-                        className="flex-shrink-0 mr-2 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                        aria-hidden="true"
-                      />
-                      <span className="text-gray-500 hover:text-gray-700">Money-back Guarantee </span>
-                    </a>
-                  </div>
+                
                 </form>
               </section>
             </div>
