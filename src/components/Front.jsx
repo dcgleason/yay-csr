@@ -694,7 +694,7 @@ const options = {
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="w-9/12 h-9/12 object-center object-cover mb-10 mx-25"
+                  className="w-9/12 h-9/12 object-center object-cover mb-10 ml-16 mx-25"
                 /> 
 
               <div className="mt-4">
