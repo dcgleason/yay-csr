@@ -841,7 +841,7 @@ const options = {
           <section aria-labelledby="details-heading">
             <div className="flex flex-col items-center text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                How is your Amore Book put together?
+                Here's how your Amore Book is put together:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
                 (Hint: we make sure <em>you</em> get all the credit)
