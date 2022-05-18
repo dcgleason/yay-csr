@@ -880,7 +880,7 @@ const options = {
           <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
           <div className="flex flex-col items-center pb-10 text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-               When to send an Amore Book?
+               When to send an Amore Book:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
                (Below are some of our favorite excuses to "share the love.")
