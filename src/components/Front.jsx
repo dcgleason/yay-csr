@@ -256,6 +256,7 @@ export default function Front() {
   const [secret, setSecret] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const[betaEmail, setBetaEmail] = useState('');
+  const[betaHeardOf, setBetaHeardOf] = useState('');
 
   const stripePromise = loadStripe('pk_test_51KtCf1LVDYVdzLHCzEQuGuw08kKelgXO7AgN6VDN874gIPxfr7dl7PvcNgUZUSnypEOxqJcMCu4G119l0MQixCkj00Rr1fOuls');
 
@@ -575,7 +576,8 @@ const options = {
                 <Dialog.Description className="text-xl m-2">
                   (it is free! We'll send you an email with instructions.)
                 </Dialog.Description>
-                <form className="mt-2 flex sm:max-w-md" >
+                <form className="mt-2 flex sm:max-w-md"
+                onSubmit={() => setIsModalOpen(false)} >
                   <label htmlFor="email-address" className="sr-only">
                     Email address
                   </label>
@@ -589,6 +591,19 @@ const options = {
                     onChange={(e)=>setBetaEmail(e.target.value)}
                     className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
                   />
+                 <label htmlFor="email-address" className="sr-only">
+                    Email address
+                  </label>
+                  <input
+                    id="email-address"
+                    type="text"
+                    placeholder="How did you hear about us?"
+                    required
+                    value={betaHeardOf}
+                    onChange={(e)=>setBetaHeardOf(e.target.value)}
+                    className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
+                  />
+                  
                   <div className="ml-4 flex-shrink-0">
                     <button
                       type="button"
