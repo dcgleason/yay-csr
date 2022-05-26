@@ -604,7 +604,7 @@ const options = {
                     required
                  >
                     <option>Friend or family member</option>
-                    <option>Google</option>
+                    <option>Google search</option>
                     <option>Advertisement</option>
                     <option>Other</option>
                   </select>
