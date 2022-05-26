@@ -566,7 +566,7 @@ const options = {
 		  onClose={() => setIsModalOpen(false)}
 			as="div"
       className=
-				"fixed inset-0 opacity-100 flex items-center justify-center overflow-y-auto bg-gray-100">
+				" fixed inset-0 opacity-100 flex items-center justify-center overflow-y-auto bg-gray-100">
 			
 			<div className="flex flex-col bg-gray-300 text-white w-96 py-8 px-4 text-center">
 				<Dialog.Overlay />
@@ -576,14 +576,13 @@ const options = {
                 <Dialog.Description className="text-xl m-2">
                   (it is free! We'll send you an email with instructions.)
                 </Dialog.Description>
-                <form className="mt-2 flex sm:max-w-md"
-                onSubmit={() => setIsModalOpen(false)} >
-                  <label htmlFor="email-address" className="sr-only">
+                <form className="mt-2 flex-col sm:max-w-md" >
+                  <label className="text-gray-700 underline text-sm font-bold">
                     Email address
                   </label>
                   <input
                     id="email-address"
-                    type="text"
+                    type="email"
                     placeholder="Email address"
                     autoComplete="email"
                     required
@@ -591,24 +590,31 @@ const options = {
                     onChange={(e)=>setBetaEmail(e.target.value)}
                     className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
                   />
-                 <label htmlFor="email-address" className="sr-only">
-                    Email address
+                 <label className="text-gray-700 underline text-sm font-bold">
+                    How did you hear about Amore Books?
                   </label>
-                  <input
-                    id="email-address"
-                    type="text"
-                    placeholder="How did you hear about us?"
-                    required
+                  <div className="mt-1">
+                  <select
+                    id="heardOf"
+                    name="heardOf"
+                    onChange={e => setBetaHeardOf(e.target.value)}
                     value={betaHeardOf}
-                    onChange={(e)=>setBetaHeardOf(e.target.value)}
-                    className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
-                  />
+                    autoComplete="country-name"
+                    className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                 >
+                    <option>Friend or family member</option>
+                    <option>Google</option>
+                    <option>Advertisement</option>
+                    <option>Other</option>
+                  </select>
+                </div>
                   
                   <div className="ml-4 flex-shrink-0">
                     <button
                       type="button"
                       className="w-full bg-[#f8ad9d] hover:bg-[#f4978e] border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f08080]"
-                      onClick={() => setIsModalOpen(false)} //need to submit email onSubmit without slowing down performance
+                      onSubmit={() => setIsModalOpen(false)} //need to submit email onSubmit without slowing down performance
                     >
                      Sign-up
                     </button>
