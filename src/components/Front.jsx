@@ -256,7 +256,8 @@ export default function Front() {
   const [secret, setSecret] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const[betaEmail, setBetaEmail] = useState('');
-  const[betaHeardOf, setBetaHeardOf] = useState('');
+  const[betaReferralSource, setBetaReferralSource] = useState('');
+  const[betaName, setBetaName] = useState('');
 
   const stripePromise = loadStripe('pk_test_51KtCf1LVDYVdzLHCzEQuGuw08kKelgXO7AgN6VDN874gIPxfr7dl7PvcNgUZUSnypEOxqJcMCu4G119l0MQixCkj00Rr1fOuls');
 
@@ -275,9 +276,29 @@ useEffect(() => {
 
 }, []);
 
+
+const submitBetaInfo = async () => {
+  setIsModalOpen(false)
+  const response =  await fetch("https://yay-api.herokuapp.com/signup", { 
+    method: 'POST', 
+    headers: { 
+      'Content-type': 'application/json'
+     }, 
+    body: JSON.stringify({
+     name: betaName,
+     email: betaEmail,
+     referralSource: betaReferralSource
+    })  
+    });
+  console.log("modal submit api response" + response);
+}
+
+
 const options = {
     client_secret: secret
   }  
+
+
 
   return (
     <div className="bg-gray-100">
@@ -577,6 +598,18 @@ const options = {
                   (it is free! We'll send you an email with instructions.)
                 </Dialog.Description>
                 <form className="mt-2 flex-col sm:max-w-md" >
+                <label className="text-gray-700 underline text-sm font-bold">
+                   Full Name
+                  </label>
+                  <input
+                    id="email-address"
+                    type="text"
+                    placeholder="Full Name"
+                    required
+                    value={betaName}
+                    onChange={(e)=>setBetaName(e.target.value)}
+                    className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
+                  />
                   <label className="text-gray-700 underline text-sm font-bold">
                     Email address
                   </label>
@@ -597,8 +630,8 @@ const options = {
                   <select
                     id="heardOf"
                     name="heardOf"
-                    onChange={e => setBetaHeardOf(e.target.value)}
-                    value={betaHeardOf}
+                    onChange={e => setBetaReferralSource(e.target.value)}
+                    value={betaReferralSource}
                     autoComplete="country-name"
                     className="shadow appearance-none border rounded w-full my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
@@ -614,7 +647,7 @@ const options = {
                     <button
                       type="button"
                       className="w-full bg-[#f8ad9d] hover:bg-[#f4978e] border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f08080]"
-                      onSubmit={() => setIsModalOpen(false)} //need to submit email onSubmit without slowing down performance
+                      onClick={() => submitBetaInfo()} //need to submit email onSubmit without slowing down performance
                     >
                      Sign-up
                     </button>
