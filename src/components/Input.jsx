@@ -44,31 +44,31 @@ const Input = (props) => {
   const stripe = useStripe();
   const elements = useElements();
  
-  useEffect(() => {
+  // useEffect(() => {
 
-  const fetchData = async () => {
-    var random = Number((Math.random() * 1000000000).toFixed())
-      // get the data from the api
-      const resp =  await fetch("https://yay-api.herokuapp.com/unique", { 
-        method: 'POST', 
-        headers: { 
-          'Content-type': 'application/json'
-         }, 
-        body: JSON.stringify({
-         giftCode: random // possible random Number 
-        })  
-        }); 
-     if (!resp){ ////response false - there does not exist a number in the db already, set 
-       console.log("the repsonse is: " + resp);
-       setRandomNumber(random);
-       console.log('random number set to:' + random)
-     }
-    else {
-      fetchData()  // recusively run until response is false and setRandomNumber has run.
-    }
-  };
-    fetchData();
-    }, [])
+  // const fetchData = async () => {
+  //   var random = Number((Math.random() * 1000000000).toFixed())
+  //     // get the data from the api
+  //     const resp =  await fetch("https://yay-api.herokuapp.com/unique", { 
+  //       method: 'POST', 
+  //       headers: { 
+  //         'Content-type': 'application/json'
+  //        }, 
+  //       body: JSON.stringify({
+  //        giftCode: random // possible random Number 
+  //       })  
+  //       }); 
+  //    if (!resp){ ////response false - there does not exist a number in the db already, set 
+  //      console.log("the repsonse is: " + resp);
+  //      setRandomNumber(random);
+  //      console.log('random number set to:' + random)
+  //    }
+  //   else {
+  //     fetchData()  // recusively run until response is false and setRandomNumber has run.
+  //   }
+  // };
+  //   fetchData();
+  //   }, [])
 
     useEffect(() => {
       setAlert({
@@ -81,7 +81,8 @@ const Input = (props) => {
 
 
   const handleChangeInput = (id, e) => {
-    generateUniqueRandom();
+   // generateUniqueRandom();
+
     const newInputFields = emails.map(i => {
       if(id === i.id) {
         i[e.target.name] = e.target.value
@@ -109,8 +110,6 @@ function timeout(ms) {
 
 
 const submitPayment = async () => {
-  
- 
   // create customer and submit payment
 
   setIsLoading(true);
@@ -147,7 +146,7 @@ const submitPayment = async () => {
     } else if (paymentIntent && paymentIntent.status === 'succeeded') {
       console.log("Your payment has succeeded", paymentIntent.status)
       setPaymentStatus({
-          status: "Your payment of $50 dollars succeeded",
+          status: "Your payment of $45 dollars succeeded",
           title: "Success",
           type: "success",
           open: true
@@ -174,8 +173,7 @@ const updatePaymentIntent = async () => {
       'Content-type': 'application/json'
      }, 
     body: JSON.stringify({
-     receipt_email: ownerEmail,
-     price: price
+     receipt_email: ownerEmail
     })  
     });
   const respData = await resp.json(); 
