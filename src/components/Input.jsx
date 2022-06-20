@@ -167,7 +167,7 @@ const submitPayment = async () => {
 
 const updatePaymentIntent = async () => {
 
-  const resp =  await fetch("https://yay-api.herokuapp.com/updatePaymentIntent", { 
+  const resp =  await fetch("https://yay-api.herokuapp.com/stripe/updatePaymentIntent", { 
     method: 'POST', 
     headers: { 
       'Content-type': 'application/json'
