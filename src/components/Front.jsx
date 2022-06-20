@@ -263,7 +263,7 @@ export default function Front() {
 
 useEffect(() => {
         const getClientSecret = async () => {
-        const response =  await fetch('https://yay-api.herokuapp.com/secret').then(res => res.json());
+        const response =  await fetch('https://yay-api.herokuapp.com/stripe/secret').then(res => res.json());
         console.log('response: '+ JSON.stringify(response));
         const data = JSON.stringify(response);
         const {client_secret} = JSON.parse(data);
@@ -279,7 +279,7 @@ useEffect(() => {
 
 const submitBetaInfo = async () => {
   setIsModalOpen(false)
-  const response =  await fetch("https://yay-api.herokuapp.com/signup", { 
+  const response =  await fetch("https://yay-api.herokuapp.com/beta/signup", { 
     method: 'POST', 
     headers: { 
       'Content-type': 'application/json'
