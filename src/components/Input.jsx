@@ -44,6 +44,31 @@ const Input = (props) => {
   const stripe = useStripe();
   const elements = useElements();
  
+  // useEffect(() => {
+
+  // const fetchData = async () => {
+  //   var random = Number((Math.random() * 1000000000).toFixed())
+  //     // get the data from the api
+  //     const resp =  await fetch("https://yay-api.herokuapp.com/unique", { 
+  //       method: 'POST', 
+  //       headers: { 
+  //         'Content-type': 'application/json'
+  //        }, 
+  //       body: JSON.stringify({
+  //        giftCode: random // possible random Number 
+  //       })  
+  //       }); 
+  //    if (!resp){ ////response false - there does not exist a number in the db already, set 
+  //      console.log("the repsonse is: " + resp);
+  //      setRandomNumber(random);
+  //      console.log('random number set to:' + random)
+  //    }
+  //   else {
+  //     fetchData()  // recusively run until response is false and setRandomNumber has run.
+  //   }
+  // };
+  //   fetchData();
+  //   }, [])
 
     useEffect(() => {
       setAlert({
@@ -93,7 +118,8 @@ const submitPayment = async () => {
   console.log('clientSecret: '+ props.clientSecret);
 
   //(async () => {
-   const {paymentIntent, error} = await stripe.confirmCardPayment(
+
+    const {paymentIntent, error} = await stripe.confirmCardPayment(
       props.clientSecret,
       {
         payment_method: {
@@ -123,7 +149,7 @@ const submitPayment = async () => {
           type: "success",
           open: true
         })
-      //postOrderMongoDB()
+     // postOrderMongoDB()
       sendEmails();
     return 'submitpayment function complete - success'
 
@@ -136,14 +162,65 @@ const submitPayment = async () => {
 
 }
 
+// const updatePaymentIntent = async () => {
+
+//   const resp =  await fetch("https://yay-api.herokuapp.com/stripe/updatePaymentIntent", { 
+//     method: 'POST', 
+//     headers: { 
+//       'Content-type': 'application/json'
+//      }, 
+//     body: JSON.stringify({
+//      receipt_email: ownerEmail
+//     })  
+//     });
+//   const respData = await resp.json(); 
+//   console.log('after payment intent update with price amount: '+respData);
+//   if(respData){ // work on this to properply handle the error / return message paymentIntent.status would be what?
+//     return true
+//   }
+//   else {
+//     return false
+//   }
+// }
+
+const databasePost = async () => {
+  const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
+      method: 'POST', 
+      headers: { 
+        'Content-type': 'application/json'
+       }, 
+      body: JSON.stringify({
+        email_id: randomNumber,
+        name: name,
+        ownerName: ownerName,
+        ownerEmail: ownerEmail,
+        address: address,
+        apartment: apartment,
+        city: city,
+        state: state,
+        zipCode: zip,
+        country: country,
+        phone: phone
+        
+      }) 
+      }); 
+    const rData = await responseEmail.json(); 
+    if (rData.status === 'success'){
+     alert("Message with owner and recipeint info sent Sent."); 
+      this.resetForm()
+     }else if(rData.status === 'fail'){
+       alert("Message failed to send.")
+     }
+    }
+
 
 const sendEmails = async () => {
-     // const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
+      const questions = [`What your favorite story about ${name}?`, `What is your favorite memory of you and ${name}?`]
       try {
             for(var j=0; j<emails.length; j++){
               if(emails[j]){
                 (async function(j){
-                const response =  await fetch("https://yay-api.herokuapp.com/email/send", { 
+                const response =  await fetch("https://yay-api.herokuapp.com/email", { 
                   method: 'POST', 
                   headers: { 
                     'Content-type': 'application/json'
