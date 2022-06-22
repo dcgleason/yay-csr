@@ -113,15 +113,12 @@ const submitPayment = async () => {
   // create customer and submit payment
 
   setIsLoading(true);
-  const result = updatePaymentIntent()
   console.log('ownerName: '+ ownerName);
   console.log('ownerEmail: '+ ownerEmail);
   console.log('clientSecret: '+ props.clientSecret);
 
   //(async () => {
-
-    if (result){
-    const {paymentIntent, error} = await stripe.confirmCardPayment(
+   const {paymentIntent, error} = await stripe.confirmCardPayment(
       props.clientSecret,
       {
         payment_method: {
@@ -158,7 +155,6 @@ const submitPayment = async () => {
       
      
     }
-  }
 //  })();
 
 
