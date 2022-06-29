@@ -220,7 +220,7 @@ const sendEmails = async () => {
             for(var j=0; j<emails.length; j++){
               if(emails[j]){
                 (async function(j){
-                const response =  await fetch("https://yay-api.herokuapp.com/email", { 
+                const response =  await fetch("https://yay-api.herokuapp.com/email/send", { 
                   method: 'POST', 
                   headers: { 
                     'Content-type': 'application/json'
@@ -233,14 +233,16 @@ const sendEmails = async () => {
                     giftOwnerMessage: giftOwnerMessage
                   }) 
                   }); 
-                const resData = await response.json(); 
-                if (resData.status === 'success'){
+          
+                if (response === 200){
                  alert("Message Sent."); 
                   this.resetForm()
-                 }else if(resData.status === 'fail'){
+                 }else if(response === 500){
                    alert("Message failed to send.")
                  }
-                console.log('j' + j);
+                console.log('contributor email ' + emails[j].email);
+                console.log('random number' + randomNumber)
+                console.log('recipient - contributor' + name);
                 })(j);
               }
             }
