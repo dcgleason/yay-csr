@@ -155,7 +155,7 @@ const userNavigation = [
 const product = {
   name: 'Create a Bundle. Spread the love.',
   href: '#',
-  price: '$45/book',
+  price: '$45',
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png',
@@ -924,7 +924,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. After one week, responses for your book are compiled and published into a physical book within 2-3 days. The completed gift is sent to you, the gift initiator, to give to the intended recipient. 
+                  2. After one week, responses for your Bundle are compiled and published into a physical book within 2-3 days. The completed gift is sent to you, the gift initiator, to give to the intended recipient. 
                 </p>
               </div>
             </div>
