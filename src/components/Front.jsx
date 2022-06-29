@@ -159,7 +159,7 @@ const product = {
   description:
    '',
   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png',
-  imageAlt: 'Amore Books logo',
+  imageAlt: 'Bundle logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
     { id: 2, name: 'Bags', href: '#' },
@@ -185,13 +185,13 @@ const policies = [
   {
     name: 'Fast turn-around',
     description:
-      "Within three weeks after ordering, you'll have your Amore gift book at your door-step, ready to gift.",
+      "Within three weeks after ordering, you'll have your Bundle at your door-step, ready to gift.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-fast-checkout-light.svg',
   },
   {
     name: 'Vouchers',
     description:
-      "Not a great time for you to gift a Amore gift book right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
+      "Not a great time for you to gift a Bundle right now? Email us your details and we will send you a voucher to use for later, or to gift to someone you know.",
     imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg',
   },
 ]
@@ -466,7 +466,7 @@ const options = {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Amore Books</span>
+                  <span className="sr-only">Bundle</span>
                   <img
                     className="h-6 w-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png"
@@ -592,7 +592,7 @@ const options = {
 			<div className="flex flex-col bg-gray-300 text-white w-96 py-8 px-4 text-center">
 				<Dialog.Overlay />
 			      	<Dialog.Title className="text-[#f08080] text-3xl">
-				      	Try the beta version of <em>Amore Books</em> 
+				      	Try the beta version of <em>Bundle</em> 
                 </Dialog.Title>
                 <Dialog.Description className="text-xl m-2">
                   (it is free! We'll send you an email with instructions.)
@@ -624,7 +624,7 @@ const options = {
                     className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#f4978e] focus:ring-1 focus:ring-[#f4978e]"
                   />
                  <label className="text-gray-700 underline text-sm font-bold">
-                    How did you hear about Amore Books?
+                    How did you hear about Bundle?
                   </label>
                   <div className="mt-1">
                   <select
@@ -787,7 +787,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500"><b>Amore Book</b>,  <em>noun</em>: a book of written messages of love and support <u>about</u> and <u>for</u> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> Connect over <em>shared love</em> for a friend or family member and get the pleasure of making your loved one's week, month, or year. </p>
+                  <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support <u>about</u> and <u>for</u> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> Connect over <em>shared love</em> for a friend or family member and get the pleasure of making your loved one's week, month, or year. </p>
                 </div>
                 <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
@@ -895,7 +895,7 @@ const options = {
           <section aria-labelledby="details-heading">
             <div className="flex flex-col items-center text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Here's how your Amore Book is put together:
+                Here's how your Bundle is put together:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
                 (Hint: we make sure <em>you</em> get all the credit)
@@ -934,7 +934,7 @@ const options = {
           <section aria-labelledby="policy-heading" className="mt-16 lg:mt-24">
           <div className="flex flex-col items-center pb-10 text-center">
               <h2 id="details-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-               When to send an Amore Book:
+               When to send a Bundle:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
                (Below are some of our favorite excuses to "share the love.")
@@ -1201,7 +1201,7 @@ const options = {
           </div>
 
           <div className="border-t border-gray-100 py-10 text-center">
-            <p className="text-sm text-gray-500">&copy; 2022 Amore Books, Inc. All rights reserved.</p>
+            <p className="text-sm text-gray-500">&copy; 2022 Bundle, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
