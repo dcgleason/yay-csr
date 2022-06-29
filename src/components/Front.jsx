@@ -158,7 +158,7 @@ const product = {
   price: '$45/book',
   description:
    '',
-  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png',
+  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png',
   imageAlt: 'Bundle logo',
   breadcrumbs: [
     { id: 1, name: 'Travel', href: '#' },
@@ -469,7 +469,7 @@ const options = {
                   <span className="sr-only">Bundle</span>
                   <img
                     className="h-6 w-auto"
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png"
                     alt=""
                   />
                 </a>
@@ -1136,7 +1136,7 @@ const options = {
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Red_Minimalist_Bird_Heart_AB.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Bundle.png"
                   alt=""
                   className="h-8 w-auto"
                 />
