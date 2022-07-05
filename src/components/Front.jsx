@@ -787,7 +787,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support <u>for</u> a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> Connect over <em>shared love</em> for a friend or family member and get the pleasure of making your loved one's week, month, or year. </p>
+                  <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support collected for a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> Connect over <em>shared love</em> for a friend or family member and get the pleasure of making your loved one's week, month, or year. </p>
                 </div>
                 <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
