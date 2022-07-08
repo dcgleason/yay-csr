@@ -214,7 +214,7 @@ const reviews = {
       `,
       author: 'Eliza Irwin',
       avatarSrc:
-        'https://media-exp1.licdn.com/dms/image/C4E03AQHLmjjAlyE4qQ/profile-displayphoto-shrink_400_400/0/1610120287416?e=1657152000&v=beta&t=iGkOTsszYK6P0KSf0EXlVakBFTIlkGBDAegBomG5PKk',
+        'https://www.linkedin.com/in/elizairwin/overlay/photo/',
     },
     // More reviews...
   ],
