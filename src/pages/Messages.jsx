@@ -48,7 +48,7 @@ const Messages = () => {
         console.log(key[0] + ", " + key[1]);
       }
   
-      const data = await fetch("https://yay-api.herokuapp.com/imageUpload", {
+      const data = await fetch("https://yay-api.herokuapp.com/gift/imageupload", {
         method: "post",
         headers: { "Content-Type": "multipart/form-data" },
         body: formData,
@@ -61,7 +61,7 @@ const Messages = () => {
       }
     }
       // message upload
-      const resp =  await fetch("https://yay-api.herokuapp.com/insertMessageBundle", { 
+      const resp =  await fetch("https://yay-api.herokuapp.comg/gift/insertmessages", { 
         method: 'POST', 
         headers: { 
           'Content-type': 'application/json'
