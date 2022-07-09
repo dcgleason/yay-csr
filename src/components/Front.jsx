@@ -898,7 +898,7 @@ const options = {
                 Here's how your Bundle is put together:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                (Hint: we make sure <em>you</em> get all the credit)
+                (This all happens within a 7-day window)
               </p>
             </div>
 

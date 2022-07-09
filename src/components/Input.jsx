@@ -44,31 +44,31 @@ const Input = (props) => {
   const stripe = useStripe();
   const elements = useElements();
  
-  // useEffect(() => {
+  useEffect(() => {
 
-  // const fetchData = async () => {
-  //   var random = Number((Math.random() * 1000000000).toFixed())
-  //     // get the data from the api
-  //     const resp =  await fetch("https://yay-api.herokuapp.com/unique", { 
-  //       method: 'POST', 
-  //       headers: { 
-  //         'Content-type': 'application/json'
-  //        }, 
-  //       body: JSON.stringify({
-  //        giftCode: random // possible random Number 
-  //       })  
-  //       }); 
-  //    if (!resp){ ////response false - there does not exist a number in the db already, set 
-  //      console.log("the repsonse is: " + resp);
-  //      setRandomNumber(random);
-  //      console.log('random number set to:' + random)
-  //    }
-  //   else {
-  //     fetchData()  // recusively run until response is false and setRandomNumber has run.
-  //   }
-  // };
-  //   fetchData();
-  //   }, [])
+  const fetchData = async () => {
+    var random = Number((Math.random() * 1000000000).toFixed())
+      // get the data from the api
+      const resp =  await fetch("https://yay-api.herokuapp.com/unique/check", { 
+        method: 'POST', 
+        headers: { 
+          'Content-type': 'application/json'
+         }, 
+        body: JSON.stringify({
+         giftCode: random // possible random Number 
+        })  
+        }); 
+     if (!resp){ ////response false - there does not exist a number in the db already, set 
+       console.log("the repsonse is: " + resp);
+       setRandomNumber(random);
+       console.log('random number set to:' + random)
+     }
+    else {
+      fetchData()  // recusively run until response is false and setRandomNumber has run.
+    }
+  };
+    fetchData();
+    }, [])
 
     useEffect(() => {
       setAlert({
