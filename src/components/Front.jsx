@@ -912,7 +912,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                 1. Family, friends, and/or coworkers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://bundle.love/write">Write</a> page about your Bundle recipient (we coordinate this for you). These "contributors" have 7 days to submit their responses. 
+                 1. Family, friends, and/or coworkers of your Bundle recipient write heartfelt messages from prompts on our <a className="underline font-bold" href="https://bundle.love/write">Write</a> page about your Bundle recipient (we coordinate this for you). These "contributors" have 5 days to submit their responses. 
                 </p>
               </div>
               <div>
@@ -924,7 +924,7 @@ const options = {
                   />
                 </div>
                 <p className="mt-8 text-base text-gray-500">
-                  2. After one week, written responses for your Bundle are compiled and published into a physical book within 2-3 days. The completed book is sent to you to give to the intended recipient. 
+                  2. After responses are collected for your Bundle, they are compiled and published into a physical book within 2-2 days. The completed book is sent to you to give to the intended recipient. 
                 </p>
               </div>
             </div>
