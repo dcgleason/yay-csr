@@ -183,35 +183,35 @@ const submitPayment = async () => {
 //   }
 // }
 
-const databasePost = async () => {
-  const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
-      method: 'POST', 
-      headers: { 
-        'Content-type': 'application/json'
-       }, 
-      body: JSON.stringify({
-        email_id: randomNumber,
-        name: name,
-        ownerName: ownerName,
-        ownerEmail: ownerEmail,
-        address: address,
-        apartment: apartment,
-        city: city,
-        state: state,
-        zipCode: zip,
-        country: country,
-        phone: phone
+// const databasePost = async () => {
+//   const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
+//       method: 'POST', 
+//       headers: { 
+//         'Content-type': 'application/json'
+//        }, 
+//       body: JSON.stringify({
+//         email_id: randomNumber,
+//         name: name,
+//         ownerName: ownerName,
+//         ownerEmail: ownerEmail,
+//         address: address,
+//         apartment: apartment,
+//         city: city,
+//         state: state,
+//         zipCode: zip,
+//         country: country,
+//         phone: phone
         
-      }) 
-      }); 
-    const rData = await responseEmail.json(); 
-    if (rData.status === 'success'){
-     alert("Message with owner and recipeint info sent Sent."); 
-      this.resetForm()
-     }else if(rData.status === 'fail'){
-       alert("Message failed to send.")
-     }
-    }
+//       }) 
+//       }); 
+//     const rData = await responseEmail.json(); 
+//     if (rData.status === 'success'){
+//      alert("Message with owner and recipeint info sent Sent."); 
+//       this.resetForm()
+//      }else if(rData.status === 'fail'){
+//        alert("Message failed to send.")
+//      }
+//     }
 
 
 const sendEmails = async () => {
@@ -272,13 +272,12 @@ setIsLoading(false);
 
 const postOrderMongoDB = async () => {
   try{
-    const resp =  await fetch("https://yay-api.herokuapp.com/insertOrder", { 
+    const resp =  await fetch("https://yay-api.herokuapp.com/gift/insertOrder", { 
       method: 'POST', 
       headers: { 
         'Content-type': 'application/json'
        }, 
       body: JSON.stringify({
-        createdAt: Date.now(),
           owner: {
             ownerName: ownerName,
             ownerEmail: ownerEmail,
