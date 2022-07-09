@@ -185,7 +185,7 @@ const submitPayment = async () => {
 
 // const databasePost = async () => {
 //   const responseEmail =  await fetch("https://yay-api.herokuapp.com/bundle", { 
-//       method: 'POST', 
+//      method: 'POST', 
 //       headers: { 
 //         'Content-type': 'application/json'
 //        }, 
