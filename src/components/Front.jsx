@@ -998,8 +998,8 @@ const options = {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-auto text-[#f8ad9d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
-                  <h3 className="mt-6 text-base font-medium text-gray-900">In Memory of</h3>
-                  <p className="mt-3 text-base text-gray-500">Collect memories of a loved one who has passed to keep forever.</p>
+                  <h3 className="mt-6 text-base font-medium text-gray-900">Just Because</h3>
+                  <p className="mt-3 text-base text-gray-500">Let someone know how much their loved, just because they are.</p>
                 </div>
               {/* ))} */}
             </div>
