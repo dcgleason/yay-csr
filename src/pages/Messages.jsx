@@ -72,7 +72,7 @@ const Messages = () => {
           giftCode: giftCode,
           messages:  [responseOne, responseTwo, responseThree, responseFour, responseFive, additionalComments]
         }) 
-        }); 
+        });
         setSuccess(true);
      
     }
