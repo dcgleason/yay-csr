@@ -787,7 +787,7 @@ const options = {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support collected for a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> We coordinate all of the logistics for you, deliver within a seven-day window, and give <em>you</em> all the credit. </p>
+                  <p className="text-base text-gray-500"><b>Bundle</b>,  <em>noun</em>: a book of written messages of love and support collected for a special person in your life from <em>his or her</em> family and friends. <br></br><br></br> We coordinate all of the logistics for you, deliver within a two week window, and give <em>you</em> all the credit. </p>
                 </div>
                 <div className="mt-6 text-center">
                     <a href="#" className="group inline-flex text-base font-medium">
@@ -898,7 +898,7 @@ const options = {
                 Here's how your Bundle is put together:
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-600">
-                (This all happens within a seven-day window)
+                (This all happens within a two week window)
               </p>
             </div>
 
