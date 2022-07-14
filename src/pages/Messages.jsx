@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Success from './Success';
 import Failure from './Failure';
 
-
+// when you input the gift code, the person's whose Bundle it is should appear in the question.
 
 const Messages = () => {
 
@@ -139,8 +139,8 @@ const Messages = () => {
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label htmlFor="about" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Describe [insert name]'s impact on you. In what ways are you grateful for the ways [insert name] has impacted you?
-              </label>
+                Describe [insert name]'s impact on you. In what ways are you grateful for the ways [insert name] has impacted you? 
+              </label> 
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <textarea
                   id="about"
